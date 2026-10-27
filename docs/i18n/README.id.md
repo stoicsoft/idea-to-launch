@@ -43,12 +43,12 @@ Pilih aplikasi AI yang kamu pakai. Semua cara memasang skill yang sama.
 
 | Aplikasi AI-mu | Cara memasang |
 |---|---|
-| **Aplikasi apa pun, satu perintah** (butuh [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` mencari aplikasi AI-mu dan memasang ke semuanya |
-| **Mac atau Linux, tanpa Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, lalu `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (chat) atau claude.ai | Unduh file zip dari [Releases](https://github.com/OWNER/idea-to-launch/releases), lalu untuk setiap file buka **Settings → Capabilities → Skills → Upload skill** (Pengaturan → Kemampuan → Skill → Unggah skill) ([detail](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (aplikasi atau CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, lalu `codex plugin add idea-to-launch@idea-to-launch` |
+| **Aplikasi apa pun, satu perintah** (butuh [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` mencari aplikasi AI-mu dan memasang ke semuanya |
+| **Mac atau Linux, tanpa Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, lalu `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (chat) atau claude.ai | Unduh file zip dari [Releases](https://github.com/stoicsoft/idea-to-launch/releases), lalu untuk setiap file buka **Settings → Capabilities → Skills → Upload skill** (Pengaturan → Kemampuan → Skill → Unggah skill) ([detail](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (aplikasi atau CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, lalu `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Cara satu perintah di atas, atau lihat [semua aplikasi](../install.md) |
 | **ChatGPT atau asisten chat lain** | Unggah [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ke sebuah proyek atau GPT kustom |
 

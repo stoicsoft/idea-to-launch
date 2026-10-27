@@ -42,12 +42,12 @@ Idea to Launch مجموعة مجانية من المهارات لمساعد ال
 
 | أداتك | طريقة التثبيت |
 |---|---|
-| **أي أداة، بأمر واحد** (يتطلب [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` يعثر على أدوات الذكاء الاصطناعي لديك ويثبّت المهارات فيها كلها |
-| **Mac أو Linux، دون Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`، ثم `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (المحادثة) أو claude.ai | تنزيل ملفات zip من صفحة [Releases](https://github.com/OWNER/idea-to-launch/releases)، ثم فتح **Settings → Capabilities → Skills → Upload skill** (الإعدادات ← القدرات ← المهارات ← رفع مهارة) لكل ملف ([التفاصيل](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (التطبيق أو CLI) | `codex plugin marketplace add OWNER/idea-to-launch`، ثم `codex plugin add idea-to-launch@idea-to-launch` |
+| **أي أداة، بأمر واحد** (يتطلب [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` يعثر على أدوات الذكاء الاصطناعي لديك ويثبّت المهارات فيها كلها |
+| **Mac أو Linux، دون Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`، ثم `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (المحادثة) أو claude.ai | تنزيل ملفات zip من صفحة [Releases](https://github.com/stoicsoft/idea-to-launch/releases)، ثم فتح **Settings → Capabilities → Skills → Upload skill** (الإعدادات ← القدرات ← المهارات ← رفع مهارة) لكل ملف ([التفاصيل](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (التطبيق أو CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`، ثم `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | طريقة الأمر الواحد أعلاه، أو [دليل كل الأدوات](../install.md) |
 | **ChatGPT أو أي مساعد محادثة آخر** | رفع [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) إلى مشروع (Project) أو إلى GPT مخصّص |
 

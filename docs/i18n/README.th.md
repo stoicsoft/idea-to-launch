@@ -28,12 +28,12 @@ Idea to Launch คือชุดสกิลฟรีสำหรับผู�
 
 | เครื่องมือของคุณ | วิธีติดตั้ง |
 |---|---|
-| **เครื่องมือไหนก็ได้ ด้วยคำสั่งเดียว** (ต้องมี [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` จะค้นหาเครื่องมือ AI ของคุณ แล้วติดตั้งให้ครบทุกตัว |
-| **Mac หรือ Linux ที่ไม่มี Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch` จากนั้น `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (แชต) หรือ claude.ai | ดาวน์โหลดไฟล์ zip จาก [Releases](https://github.com/OWNER/idea-to-launch/releases) (หน้ารวมเวอร์ชันที่เผยแพร่) แล้วอัปโหลดทีละไฟล์ที่ **Settings → Capabilities → Skills → Upload skill** (การตั้งค่า → ความสามารถ → สกิล → อัปโหลดสกิล) ([ดูรายละเอียด](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (แอปหรือแบบพิมพ์คำสั่ง) | `codex plugin marketplace add OWNER/idea-to-launch` จากนั้น `codex plugin add idea-to-launch@idea-to-launch` |
+| **เครื่องมือไหนก็ได้ ด้วยคำสั่งเดียว** (ต้องมี [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` จะค้นหาเครื่องมือ AI ของคุณ แล้วติดตั้งให้ครบทุกตัว |
+| **Mac หรือ Linux ที่ไม่มี Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch` จากนั้น `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (แชต) หรือ claude.ai | ดาวน์โหลดไฟล์ zip จาก [Releases](https://github.com/stoicsoft/idea-to-launch/releases) (หน้ารวมเวอร์ชันที่เผยแพร่) แล้วอัปโหลดทีละไฟล์ที่ **Settings → Capabilities → Skills → Upload skill** (การตั้งค่า → ความสามารถ → สกิล → อัปโหลดสกิล) ([ดูรายละเอียด](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (แอปหรือแบบพิมพ์คำสั่ง) | `codex plugin marketplace add stoicsoft/idea-to-launch` จากนั้น `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | ใช้วิธีติดตั้งด้วยคำสั่งเดียวด้านบน หรือดู[ทุกเครื่องมือ](../install.md) |
 | **ChatGPT หรือผู้ช่วยแชตอื่น ๆ** | อัปโหลด [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ไปไว้ในโปรเจกต์หรือ GPT ที่สร้างเอง |
 

@@ -42,12 +42,12 @@ Idea to Launch मुफ़्त स्किल्स का एक सेट 
 
 | आपका टूल | इंस्टॉल कैसे करें |
 |---|---|
-| **कोई भी टूल, एक कमांड** ([Node.js](https://nodejs.org) चाहिए) | `npx github:OWNER/idea-to-launch` आपके AI टूल ढूँढकर सब में इंस्टॉल कर देता है |
-| **Mac या Linux, बिना Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, फिर `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (चैट) या claude.ai | [Releases](https://github.com/OWNER/idea-to-launch/releases) से zip फ़ाइलें डाउनलोड करें, फिर हर फ़ाइल के लिए **Settings → Capabilities → Skills → Upload skill** (सेटिंग्स → क्षमताएँ → स्किल्स → स्किल अपलोड करें) खोलें ([पूरी जानकारी](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (ऐप या CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, फिर `codex plugin add idea-to-launch@idea-to-launch` |
+| **कोई भी टूल, एक कमांड** ([Node.js](https://nodejs.org) चाहिए) | `npx github:stoicsoft/idea-to-launch` आपके AI टूल ढूँढकर सब में इंस्टॉल कर देता है |
+| **Mac या Linux, बिना Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, फिर `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (चैट) या claude.ai | [Releases](https://github.com/stoicsoft/idea-to-launch/releases) से zip फ़ाइलें डाउनलोड करें, फिर हर फ़ाइल के लिए **Settings → Capabilities → Skills → Upload skill** (सेटिंग्स → क्षमताएँ → स्किल्स → स्किल अपलोड करें) खोलें ([पूरी जानकारी](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (ऐप या CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, फिर `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | ऊपर वाला एक-कमांड तरीका, या [हर टूल की गाइड](../install.md) देखें |
 | **ChatGPT या कोई और चैट असिस्टेंट** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) को किसी प्रोजेक्ट या कस्टम GPT में अपलोड करें |
 

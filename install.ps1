@@ -1,6 +1,6 @@
 # Idea to Launch installer for Windows (PowerShell 5.1 or newer).
 #
-#   irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
 #
 # To choose tools, download the script and run it with options:
 #   .\install.ps1 -Agent claude,cursor     .\install.ps1 -All     .\install.ps1 -Uninstall
@@ -15,7 +15,7 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 
-$Repo = if ($env:IDEA_TO_LAUNCH_REPO) { $env:IDEA_TO_LAUNCH_REPO } else { 'OWNER/idea-to-launch' }
+$Repo = if ($env:IDEA_TO_LAUNCH_REPO) { $env:IDEA_TO_LAUNCH_REPO } else { 'stoicsoft/idea-to-launch' }
 $Skills = @('app-builder', 'app-idea', 'app-plan', 'app-design', 'app-build', 'app-change', 'app-fix', 'app-review', 'app-launch')
 $Suite = 'idea-to-launch'
 $Agent = @($Agent | ForEach-Object { $_ -split ',' } | Where-Object { $_ })

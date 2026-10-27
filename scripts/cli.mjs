@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Idea to Launch installer. No dependencies; Node 18 or newer.
 //
-//   npx github:OWNER/idea-to-launch                 install into every AI tool found
+//   npx github:stoicsoft/idea-to-launch                 install into every AI tool found
 //   node scripts/cli.mjs install [options]
 //   node scripts/cli.mjs uninstall [options]
 //   node scripts/cli.mjs list

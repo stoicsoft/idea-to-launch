@@ -27,9 +27,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/idea-to-launch.git"
+    "url": "git+https://github.com/stoicsoft/idea-to-launch.git"
   },
-  "homepage": "https://github.com/OWNER/idea-to-launch#readme",
+  "homepage": "https://github.com/stoicsoft/idea-to-launch#readme",
   "author": "StoicSoft",
   "license": "MIT",
   "keywords": [

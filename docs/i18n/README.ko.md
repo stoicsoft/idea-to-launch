@@ -28,12 +28,12 @@ Idea to Launch는 지금 쓰고 계신 AI 어시스턴트에 더하는 무료 �
 
 | 사용하시는 도구 | 설치 방법 |
 |---|---|
-| **어떤 도구든, 명령어 한 줄로** ([Node.js](https://nodejs.org) 필요) | `npx github:OWNER/idea-to-launch` 명령어가 AI 도구를 찾아서 모두에 설치해요 |
-| **Mac이나 Linux, Node.js 없이** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch` 다음에 `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (채팅) 또는 claude.ai | [Releases](https://github.com/OWNER/idea-to-launch/releases)(배포 페이지)에서 zip 파일을 내려받은 다음, 파일마다 **Settings → Capabilities → Skills → Upload skill**(설정 → 기능 → 스킬 → 스킬 업로드)에서 올려 주세요 ([자세히 보기](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (앱 또는 명령줄 버전) | `codex plugin marketplace add OWNER/idea-to-launch` 다음에 `codex plugin add idea-to-launch@idea-to-launch` |
+| **어떤 도구든, 명령어 한 줄로** ([Node.js](https://nodejs.org) 필요) | `npx github:stoicsoft/idea-to-launch` 명령어가 AI 도구를 찾아서 모두에 설치해요 |
+| **Mac이나 Linux, Node.js 없이** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch` 다음에 `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (채팅) 또는 claude.ai | [Releases](https://github.com/stoicsoft/idea-to-launch/releases)(배포 페이지)에서 zip 파일을 내려받은 다음, 파일마다 **Settings → Capabilities → Skills → Upload skill**(설정 → 기능 → 스킬 → 스킬 업로드)에서 올려 주세요 ([자세히 보기](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (앱 또는 명령줄 버전) | `codex plugin marketplace add stoicsoft/idea-to-launch` 다음에 `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | 위의 명령어 한 줄 설치를 쓰시거나, [모든 도구](../install.md)를 확인하세요 |
 | **ChatGPT나 다른 채팅 어시스턴트** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 파일을 프로젝트나 맞춤형 GPT에 올려 주세요 |
 

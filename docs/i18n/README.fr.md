@@ -46,12 +46,12 @@ compétences.
 
 | Votre outil | Comment l'installer |
 |---|---|
-| **N'importe quel outil, une seule commande** (nécessite [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` trouve vos outils d'IA et s'installe dans chacun d'eux |
-| **Mac ou Linux, sans Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, puis `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (chat) ou claude.ai | Téléchargez les fichiers zip depuis [Releases](https://github.com/OWNER/idea-to-launch/releases), puis, pour chacun, allez dans **Settings → Capabilities → Skills → Upload skill** (Paramètres → Capacités → Compétences → Importer une compétence) ([détails](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (app ou CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, puis `codex plugin add idea-to-launch@idea-to-launch` |
+| **N'importe quel outil, une seule commande** (nécessite [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` trouve vos outils d'IA et s'installe dans chacun d'eux |
+| **Mac ou Linux, sans Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, puis `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (chat) ou claude.ai | Téléchargez les fichiers zip depuis [Releases](https://github.com/stoicsoft/idea-to-launch/releases), puis, pour chacun, allez dans **Settings → Capabilities → Skills → Upload skill** (Paramètres → Capacités → Compétences → Importer une compétence) ([détails](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (app ou CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, puis `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | L'installation en une seule commande ci-dessus, ou consultez [la liste de tous les outils](../install.md) |
 | **ChatGPT ou tout autre assistant de chat** | Importez [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) dans un projet ou un GPT personnalisé |
 

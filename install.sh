@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Idea to Launch installer for macOS and Linux.
 #
-#   curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh | bash
-#   curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh | bash -s -- --agent claude,cursor
+#   curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash -s -- --agent claude,cursor
 #
 # Options: --agent <ids>  --all  --project [dir]  --uninstall  --dry-run  --ref <branch-or-tag>
 # Copies the skills into every AI tool it finds. Uses Node.js when available
 # (same logic as `npx`), and plain shell otherwise. It never needs sudo.
 set -euo pipefail
 
-REPO="${IDEA_TO_LAUNCH_REPO:-OWNER/idea-to-launch}"
+REPO="${IDEA_TO_LAUNCH_REPO:-stoicsoft/idea-to-launch}"
 REF="main"
 SKILLS="app-builder app-idea app-plan app-design app-build app-change app-fix app-review app-launch"
 SUITE="idea-to-launch"

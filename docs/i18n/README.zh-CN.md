@@ -28,12 +28,12 @@ Idea to Launch 是一套免费的技能，装进你已经在用的 AI 助手里�
 
 | 你的工具 | 怎么安装 |
 |---|---|
-| **任何工具，一条命令搞定**（需要 [Node.js](https://nodejs.org)） | `npx github:OWNER/idea-to-launch` 会找到你的 AI 工具，一次全部装好 |
-| **Mac 或 Linux，没有 Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`，然后 `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop**（聊天）或 claude.ai | 从 [Releases](https://github.com/OWNER/idea-to-launch/releases)（发布页）下载 zip 压缩包，然后每个都在 **Settings → Capabilities → Skills → Upload skill**（设置 → 功能 → 技能 → 上传技能）里上传一次（[详细说明](../install.md#claude-desktop-and-claudeai)） |
-| **Codex**（App 或命令行版） | `codex plugin marketplace add OWNER/idea-to-launch`，然后 `codex plugin add idea-to-launch@idea-to-launch` |
+| **任何工具，一条命令搞定**（需要 [Node.js](https://nodejs.org)） | `npx github:stoicsoft/idea-to-launch` 会找到你的 AI 工具，一次全部装好 |
+| **Mac 或 Linux，没有 Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`，然后 `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop**（聊天）或 claude.ai | 从 [Releases](https://github.com/stoicsoft/idea-to-launch/releases)（发布页）下载 zip 压缩包，然后每个都在 **Settings → Capabilities → Skills → Upload skill**（设置 → 功能 → 技能 → 上传技能）里上传一次（[详细说明](../install.md#claude-desktop-and-claudeai)） |
+| **Codex**（App 或命令行版） | `codex plugin marketplace add stoicsoft/idea-to-launch`，然后 `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Kiro…** | 用上面那条一键安装命令，或者查看[所有工具](../install.md) |
 | **ChatGPT 或其他聊天助手** | 把 [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 上传到一个项目或自定义 GPT 里 |
 

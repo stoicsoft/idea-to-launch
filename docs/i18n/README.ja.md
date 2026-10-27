@@ -28,12 +28,12 @@ Idea to Launch は、いつも使っている AI アシスタントに追加で�
 
 | お使いのツール | インストール方法 |
 |---|---|
-| **どのツールでも、コマンド1つで**（[Node.js](https://nodejs.org) が必要） | `npx github:OWNER/idea-to-launch` が AI ツールを見つけて、そのすべてにインストールします |
-| **Mac または Linux（Node.js なし）** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch` のあと、`/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop**（チャット）または claude.ai | [Releases](https://github.com/OWNER/idea-to-launch/releases)（公開版のページ）から zip ファイルをダウンロードし、1つずつ **Settings → Capabilities → Skills → Upload skill**（設定 → 機能 → スキル → スキルをアップロード）からアップロードします（[詳しくはこちら](../install.md#claude-desktop-and-claudeai)） |
-| **Codex**（アプリ版またはコマンドライン版） | `codex plugin marketplace add OWNER/idea-to-launch` のあと、`codex plugin add idea-to-launch@idea-to-launch` |
+| **どのツールでも、コマンド1つで**（[Node.js](https://nodejs.org) が必要） | `npx github:stoicsoft/idea-to-launch` が AI ツールを見つけて、そのすべてにインストールします |
+| **Mac または Linux（Node.js なし）** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch` のあと、`/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop**（チャット）または claude.ai | [Releases](https://github.com/stoicsoft/idea-to-launch/releases)（公開版のページ）から zip ファイルをダウンロードし、1つずつ **Settings → Capabilities → Skills → Upload skill**（設定 → 機能 → スキル → スキルをアップロード）からアップロードします（[詳しくはこちら](../install.md#claude-desktop-and-claudeai)） |
+| **Codex**（アプリ版またはコマンドライン版） | `codex plugin marketplace add stoicsoft/idea-to-launch` のあと、`codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Kiro…** | 上の「コマンド1つ」の方法を使うか、[すべてのツール](../install.md)を見てください |
 | **ChatGPT やその他のチャットアシスタント** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) をプロジェクトまたはカスタム GPT にアップロードします |
 

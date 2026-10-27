@@ -28,12 +28,12 @@ Idea to Launch 是一套免費的技能，裝進你已經在用的 AI 助理就�
 
 | 你的工具 | 怎麼安裝 |
 |---|---|
-| **任何工具，一行指令搞定**（需要 [Node.js](https://nodejs.org)） | `npx github:OWNER/idea-to-launch` 會找出你的 AI 工具，一次全部裝好 |
-| **Mac 或 Linux，沒有 Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`，接著 `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop**（聊天）或 claude.ai | 從 [Releases](https://github.com/OWNER/idea-to-launch/releases)（發布頁面）下載 zip 壓縮檔，然後每個都在 **Settings → Capabilities → Skills → Upload skill**（設定 → 功能 → 技能 → 上傳技能）上傳一次（[詳細說明](../install.md#claude-desktop-and-claudeai)） |
-| **Codex**（App 或命令列版） | `codex plugin marketplace add OWNER/idea-to-launch`，接著 `codex plugin add idea-to-launch@idea-to-launch` |
+| **任何工具，一行指令搞定**（需要 [Node.js](https://nodejs.org)） | `npx github:stoicsoft/idea-to-launch` 會找出你的 AI 工具，一次全部裝好 |
+| **Mac 或 Linux，沒有 Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`，接著 `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop**（聊天）或 claude.ai | 從 [Releases](https://github.com/stoicsoft/idea-to-launch/releases)（發布頁面）下載 zip 壓縮檔，然後每個都在 **Settings → Capabilities → Skills → Upload skill**（設定 → 功能 → 技能 → 上傳技能）上傳一次（[詳細說明](../install.md#claude-desktop-and-claudeai)） |
+| **Codex**（App 或命令列版） | `codex plugin marketplace add stoicsoft/idea-to-launch`，接著 `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Kiro…** | 用上面那一行指令安裝，或參考[所有工具](../install.md) |
 | **ChatGPT 或其他聊天助理** | 把 [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 上傳到專案或自訂 GPT |
 

@@ -41,12 +41,12 @@ Chọn công cụ bạn đang dùng. Cách nào cũng cài cùng một bộ kỹ
 
 | Công cụ của bạn | Cách cài |
 |---|---|
-| **Mọi công cụ, chỉ một lệnh** (cần [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` tự tìm các công cụ AI của bạn và cài vào tất cả |
-| **Mac hoặc Linux, không có Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, rồi `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (trò chuyện) hoặc claude.ai | Tải các file zip ở trang [Releases](https://github.com/OWNER/idea-to-launch/releases), rồi với từng file, vào **Settings → Capabilities → Skills → Upload skill** (Cài đặt → Khả năng → Kỹ năng → Tải kỹ năng lên) ([chi tiết](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (ứng dụng hoặc CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, rồi `codex plugin add idea-to-launch@idea-to-launch` |
+| **Mọi công cụ, chỉ một lệnh** (cần [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` tự tìm các công cụ AI của bạn và cài vào tất cả |
+| **Mac hoặc Linux, không có Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, rồi `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (trò chuyện) hoặc claude.ai | Tải các file zip ở trang [Releases](https://github.com/stoicsoft/idea-to-launch/releases), rồi với từng file, vào **Settings → Capabilities → Skills → Upload skill** (Cài đặt → Khả năng → Kỹ năng → Tải kỹ năng lên) ([chi tiết](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (ứng dụng hoặc CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, rồi `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Cách cài một lệnh ở trên, hoặc xem [mọi công cụ](../install.md) |
 | **ChatGPT hoặc trợ lý trò chuyện khác** | Tải [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) lên một dự án (project) hoặc một GPT tuỳ chỉnh |
 
