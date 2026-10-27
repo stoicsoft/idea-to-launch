@@ -36,25 +36,47 @@ A few rounds later, you have:
 
 ## Install
 
-Pick the tool you use. Every option installs the same skills.
+![On a Mac, open Terminal and paste one line; on Windows, open PowerShell and paste one line; then restart your AI tool and say what you want to build](docs/images/install.png)
 
-| Your tool | How to install |
-|---|---|
-| **Any tool, one command** (needs [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` finds your AI tools and installs into all of them |
-| **Mac or Linux, no Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, then `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (chat) or claude.ai | Download the zips from [Releases](https://github.com/stoicsoft/idea-to-launch/releases), then **Settings → Capabilities → Skills → Upload skill** for each one ([details](docs/install.md#claude-desktop-and-claudeai)) |
-| **Codex** (app or CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, then `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | The one-command install above, or see [every tool](docs/install.md) |
-| **ChatGPT or any other chat assistant** | Upload [`idea-to-launch-prompt.md`](docs/install.md#chatgpt-and-other-chat-assistants) to a project or custom GPT |
+Copy one line into your computer's terminal. It finds the AI tools on your
+computer (Claude Code, Codex, Cursor, Gemini CLI, Copilot and
+[15 more](docs/install.md#every-supported-tool)) and adds the skills to all
+of them. It only copies text files, needs no admin rights, and you can
+remove it at any time.
+
+**On a Mac** (or Linux): open **Terminal** (press ⌘ Space, type
+`Terminal`, press Enter), paste this line and press Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**On Windows:** open **PowerShell** (press the Windows key, type
+`PowerShell`, press Enter), paste this line and press Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Then **restart your AI tool** (or start a new chat) and say:
 
 > I want to build an app for my business. Can you help?
 
-The full guide, with every tool and how to update or remove it, is in
-[docs/install.md](docs/install.md).
+If you already use Node.js, `npx github:stoicsoft/idea-to-launch` does the
+same thing.
+
+### Other ways to install
+
+| Your tool | How to install |
+|---|---|
+| **Claude Code**, as a plugin | `/plugin marketplace add stoicsoft/idea-to-launch`, then `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (app or CLI), as a plugin | `codex plugin marketplace add stoicsoft/idea-to-launch`, then `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, as an extension | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (chat) or claude.ai | The command above can't reach these. Download the zips from [Releases](https://github.com/stoicsoft/idea-to-launch/releases), then **Settings → Capabilities → Skills → Upload skill** for each one ([details](docs/install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT or any other chat assistant** | Upload [`idea-to-launch-prompt.md`](docs/install.md#chatgpt-and-other-chat-assistants) to a project or custom GPT |
+
+The full guide, with every tool, how to choose which tools get the skills,
+and how to update or remove them, is in [docs/install.md](docs/install.md).
 
 ## The steps
 

@@ -38,25 +38,45 @@ Idea to Launch मुफ़्त स्किल्स का एक सेट 
 
 ## इंस्टॉल करें
 
-अपना टूल चुनें। हर तरीके से वही स्किल्स इंस्टॉल होती हैं।
+बस एक लाइन कॉपी करके अपने कंप्यूटर के टर्मिनल में डालें। यह आपके कंप्यूटर पर
+मौजूद AI टूल (Claude Code, Codex, Cursor, Gemini CLI, Copilot और
+[15 दूसरे टूल](../install.md#every-supported-tool)) ढूँढता है और उन सब में
+स्किल्स जोड़ देता है। यह सिर्फ़ टेक्स्ट फ़ाइलें कॉपी करता है, इसके लिए एडमिन
+अधिकारों की ज़रूरत नहीं होती, और आप इसे कभी भी हटा सकते हैं।
 
-| आपका टूल | इंस्टॉल कैसे करें |
-|---|---|
-| **कोई भी टूल, एक कमांड** ([Node.js](https://nodejs.org) चाहिए) | `npx github:stoicsoft/idea-to-launch` आपके AI टूल ढूँढकर सब में इंस्टॉल कर देता है |
-| **Mac या Linux, बिना Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, फिर `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (चैट) या claude.ai | [Releases](https://github.com/stoicsoft/idea-to-launch/releases) से zip फ़ाइलें डाउनलोड करें, फिर हर फ़ाइल के लिए **Settings → Capabilities → Skills → Upload skill** (सेटिंग्स → क्षमताएँ → स्किल्स → स्किल अपलोड करें) खोलें ([पूरी जानकारी](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (ऐप या CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, फिर `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | ऊपर वाला एक-कमांड तरीका, या [हर टूल की गाइड](../install.md) देखें |
-| **ChatGPT या कोई और चैट असिस्टेंट** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) को किसी प्रोजेक्ट या कस्टम GPT में अपलोड करें |
+**Mac पर** (या Linux पर): **Terminal** खोलें (⌘ Space दबाएँ, `Terminal`
+टाइप करें, Enter दबाएँ), यह लाइन पेस्ट करें और Enter दबाएँ:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**Windows पर:** **PowerShell** खोलें (Windows बटन दबाएँ, `PowerShell` टाइप
+करें, Enter दबाएँ), यह लाइन पेस्ट करें और Enter दबाएँ:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 फिर **अपना AI टूल रीस्टार्ट करें** (या नई चैट शुरू करें) और लिखें:
 
 > मुझे अपने बिज़नेस के लिए एक ऐप बनाना है। क्या आप मदद कर सकते हैं?
 
-हर टूल के लिए पूरी गाइड, अपडेट करने या हटाने के तरीके के साथ,
-[docs/install.md](../install.md) में है।
+अगर आप पहले से Node.js इस्तेमाल करते हैं, तो
+`npx github:stoicsoft/idea-to-launch` से भी यही काम हो जाता है।
+
+### इंस्टॉल करने के दूसरे तरीके
+
+| आपका टूल | इंस्टॉल कैसे करें |
+|---|---|
+| **Claude Code**, प्लगइन के रूप में | `/plugin marketplace add stoicsoft/idea-to-launch`, फिर `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (ऐप या CLI), प्लगइन के रूप में | `codex plugin marketplace add stoicsoft/idea-to-launch`, फिर `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, एक्सटेंशन के रूप में | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (चैट) या claude.ai | ऊपर वाली कमांड इन तक नहीं पहुँच पाती। [Releases](https://github.com/stoicsoft/idea-to-launch/releases) से zip फ़ाइलें डाउनलोड करें, फिर हर फ़ाइल के लिए **Settings → Capabilities → Skills → Upload skill** (सेटिंग्स → क्षमताएँ → स्किल्स → स्किल अपलोड करें) खोलें ([पूरी जानकारी](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT या कोई और चैट असिस्टेंट** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) को किसी प्रोजेक्ट या कस्टम GPT में अपलोड करें |
+
+पूरी गाइड, जिसमें हर टूल, स्किल्स किन टूल में जाएँ यह चुनने का तरीका, और
+उन्हें अपडेट करने या हटाने का तरीका है, [docs/install.md](../install.md) में है।
 
 ## चरण
 

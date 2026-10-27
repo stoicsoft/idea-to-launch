@@ -37,25 +37,45 @@ Sau vài lượt trao đổi, bạn sẽ có:
 
 ## Cài đặt
 
-Chọn công cụ bạn đang dùng. Cách nào cũng cài cùng một bộ kỹ năng.
+Chỉ cần chép một dòng vào cửa sổ dòng lệnh (terminal) trên máy tính của bạn.
+Lệnh này tự tìm các công cụ AI trên máy (Claude Code, Codex, Cursor,
+Gemini CLI, Copilot và [15 công cụ khác](../install.md#every-supported-tool))
+rồi thêm bộ kỹ năng vào tất cả. Nó chỉ chép các file văn bản, không cần quyền
+quản trị máy (admin), và bạn có thể gỡ bỏ bất cứ lúc nào.
 
-| Công cụ của bạn | Cách cài |
-|---|---|
-| **Mọi công cụ, chỉ một lệnh** (cần [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` tự tìm các công cụ AI của bạn và cài vào tất cả |
-| **Mac hoặc Linux, không có Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, rồi `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (trò chuyện) hoặc claude.ai | Tải các file zip ở trang [Releases](https://github.com/stoicsoft/idea-to-launch/releases), rồi với từng file, vào **Settings → Capabilities → Skills → Upload skill** (Cài đặt → Khả năng → Kỹ năng → Tải kỹ năng lên) ([chi tiết](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (ứng dụng hoặc CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, rồi `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Cách cài một lệnh ở trên, hoặc xem [mọi công cụ](../install.md) |
-| **ChatGPT hoặc trợ lý trò chuyện khác** | Tải [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) lên một dự án (project) hoặc một GPT tuỳ chỉnh |
+**Trên máy Mac** (hoặc Linux): mở **Terminal** (nhấn ⌘ Space, gõ
+`Terminal`, nhấn Enter), dán dòng này vào rồi nhấn Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**Trên Windows:** mở **PowerShell** (nhấn phím Windows, gõ
+`PowerShell`, nhấn Enter), dán dòng này vào rồi nhấn Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Sau đó **khởi động lại công cụ AI** (hoặc mở một cuộc trò chuyện mới) và nói:
 
 > Tôi muốn làm một ứng dụng cho việc kinh doanh của mình. Bạn giúp tôi được không?
 
-Hướng dẫn đầy đủ cho mọi công cụ, kèm cách cập nhật hoặc gỡ bỏ, nằm ở
-[docs/install.md](../install.md).
+Nếu bạn đã dùng Node.js, lệnh `npx github:stoicsoft/idea-to-launch` cũng làm
+đúng việc này.
+
+### Các cách cài khác
+
+| Công cụ của bạn | Cách cài |
+|---|---|
+| **Claude Code**, dưới dạng plugin | `/plugin marketplace add stoicsoft/idea-to-launch`, rồi `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (ứng dụng hoặc CLI), dưới dạng plugin | `codex plugin marketplace add stoicsoft/idea-to-launch`, rồi `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, dưới dạng tiện ích mở rộng (extension) | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (trò chuyện) hoặc claude.ai | Lệnh ở trên không cài vào được hai nơi này. Tải các file zip ở trang [Releases](https://github.com/stoicsoft/idea-to-launch/releases), rồi với từng file, vào **Settings → Capabilities → Skills → Upload skill** (Cài đặt → Khả năng → Kỹ năng → Tải kỹ năng lên) ([chi tiết](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT hoặc trợ lý trò chuyện khác** | Tải [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) lên một dự án (project) hoặc một GPT tuỳ chỉnh |
+
+Hướng dẫn đầy đủ cho mọi công cụ, kèm cách chọn những công cụ nào được cài bộ
+kỹ năng, và cách cập nhật hoặc gỡ bỏ, nằm ở [docs/install.md](../install.md).
 
 ## Các bước
 

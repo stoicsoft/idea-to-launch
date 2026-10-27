@@ -24,24 +24,37 @@ Idea to Launch 是一套免费的技能，装进你已经在用的 AI 助手里�
 
 ## 安装
 
-选你正在用的工具。每种方式装的都是同一套技能。
+把一行命令复制到电脑的终端里就行。它会找到你电脑上的 AI 工具（Claude Code、Codex、Cursor、Gemini CLI、Copilot，还有[另外 15 款](../install.md#every-supported-tool)），把技能装进每一个工具里。它只会复制一些文本文件，不需要管理员权限，你随时都可以卸载。
 
-| 你的工具 | 怎么安装 |
-|---|---|
-| **任何工具，一条命令搞定**（需要 [Node.js](https://nodejs.org)） | `npx github:stoicsoft/idea-to-launch` 会找到你的 AI 工具，一次全部装好 |
-| **Mac 或 Linux，没有 Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`，然后 `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop**（聊天）或 claude.ai | 从 [Releases](https://github.com/stoicsoft/idea-to-launch/releases)（发布页）下载 zip 压缩包，然后每个都在 **Settings → Capabilities → Skills → Upload skill**（设置 → 功能 → 技能 → 上传技能）里上传一次（[详细说明](../install.md#claude-desktop-and-claudeai)） |
-| **Codex**（App 或命令行版） | `codex plugin marketplace add stoicsoft/idea-to-launch`，然后 `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Kiro…** | 用上面那条一键安装命令，或者查看[所有工具](../install.md) |
-| **ChatGPT 或其他聊天助手** | 把 [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 上传到一个项目或自定义 GPT 里 |
+**在 Mac 上**（或 Linux）：按 ⌘ Space，输入 `Terminal`，按 Enter 键，打开 **Terminal**（终端）。把下面这一行粘贴进去，再按 Enter 键：
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**在 Windows 上：** 按 Windows 键，输入 `PowerShell`，按 Enter 键，打开 **PowerShell**。把下面这一行粘贴进去，再按 Enter 键：
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 然后**重启你的 AI 工具**（或者开一个新对话），对它说：
 
 > 我想给我的生意做一个应用，你能帮我吗？
 
-完整指南都在 [docs/install.md](../install.md)，包括每个工具的安装方法，以及怎么更新或卸载。
+如果你已经在用 Node.js，用 `npx github:stoicsoft/idea-to-launch` 也能做到同样的事。
+
+### 其他安装方式
+
+| 你的工具 | 怎么安装 |
+|---|---|
+| **Claude Code**，作为插件 | `/plugin marketplace add stoicsoft/idea-to-launch`，然后 `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex**（App 或命令行版），作为插件 | `codex plugin marketplace add stoicsoft/idea-to-launch`，然后 `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**，作为扩展 | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop**（聊天）或 claude.ai | 上面那条命令装不到这两个地方。从 [Releases](https://github.com/stoicsoft/idea-to-launch/releases)（发布页）下载 zip 压缩包，然后每个都在 **Settings → Capabilities → Skills → Upload skill**（设置 → 功能 → 技能 → 上传技能）里上传一次（[详细说明](../install.md#claude-desktop-and-claudeai)） |
+| **ChatGPT 或其他任何聊天助手** | 把 [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 上传到一个项目或自定义 GPT 里 |
+
+完整指南都在 [docs/install.md](../install.md)，包括每个工具的安装方法、怎么选择把技能装到哪些工具里，以及怎么更新或卸载。
 
 ## 步骤
 

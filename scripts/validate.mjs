@@ -102,6 +102,14 @@ for (const doc of docs) {
   }
 }
 
+// Translations: every README carries the English README's install lines, character for character.
+const installLines = [...readFileSync(join(ROOT, 'README.md'), 'utf8').matchAll(/^(?:curl|irm) .*$/gm)].map((m) => m[0])
+if (installLines.length < 2) err('README.md', 'install section has no curl and irm lines')
+for (const doc of docs.filter((d) => d.startsWith('docs/i18n/'))) {
+  const text = readFileSync(join(ROOT, doc), 'utf8')
+  for (const line of installLines) if (!text.includes(line)) err(doc, `missing the install line "${line}"`)
+}
+
 const manifests = [
   ['.claude-plugin/plugin.json', (j) => j.version],
   ['.claude-plugin/marketplace.json', (j) => j.plugins?.[0]?.version],

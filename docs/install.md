@@ -1,26 +1,55 @@
 # Install Idea to Launch
 
-![Install options for any tool, Claude Code, Codex, Gemini CLI, Claude Desktop and ChatGPT, then restart and say what you want to build](images/install.png)
+![Install in one minute: on a Mac, open Terminal and paste one line; on Windows, open PowerShell and paste one line; then restart your AI tool and say what you want to build](images/install.png)
 
 Idea to Launch is a folder of nine skills: plain-text instructions your AI
 assistant reads when they're useful. Installing means copying that folder
 to where your AI tool looks for skills. Nothing runs in the background,
 nothing is sent anywhere, and you can remove it at any time.
 
-**Fastest:** if you have [Node.js](https://nodejs.org), run this in a
-terminal. It finds every AI tool on your computer and installs into all of
-them:
+## Start here: one line in the terminal
+
+The terminal is the window where you type commands to your computer. You
+only need it once, for this one line. It finds every AI tool on your
+computer and adds the skills to all of them.
+
+**On a Mac** (or Linux):
+
+1. Open **Terminal**: press ⌘ Space, type `Terminal`, and press Enter.
+2. Paste this line and press Enter:
+
+   ```sh
+   curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+   ```
+
+**On Windows:**
+
+1. Open **PowerShell**: press the Windows key, type `PowerShell`, and
+   press Enter.
+2. Paste this line and press Enter:
+
+   ```powershell
+   irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+   ```
+
+You'll see a ✓ (or + on Windows) next to each AI tool it found. Then
+**restart your AI tool** (or start a new chat) and say: "I want to build an
+app for my business. Can you help?"
+
+If it says **"No AI tools found"**, you haven't used a coding tool on this
+computer yet. Install one (Claude Code, Codex, Cursor or Gemini CLI), open
+it once, and run the line again. If you only use Claude Desktop's chat or
+claude.ai, use [the zips](#claude-desktop-and-claudeai) instead.
+
+If you already use [Node.js](https://nodejs.org), this does the same thing
+on any system:
 
 ```sh
 npx github:stoicsoft/idea-to-launch
 ```
 
-Not sure what a terminal is? On a Mac, open **Terminal** (press ⌘ Space
-and type "Terminal"). On Windows, open **PowerShell** from the Start menu.
-Paste the line, then press Enter.
-
-After installing, **restart your AI tool** (or start a new chat) and say:
-"I want to build an app for my business. Can you help?"
+The sections below cover other ways to install for each tool, and how to
+choose tools, update or remove.
 
 ---
 
@@ -36,8 +65,7 @@ Pick one:
   The steps then appear as `/idea-to-launch:app-idea` and so on. You can
   also just describe what you want.
 - **As plain skills:** `npx github:stoicsoft/idea-to-launch --agent claude`, or the
-  [Mac/Linux](#mac-and-linux-without-nodejs) or [Windows](#windows)
-  installer. The steps appear as `/app-idea` and so on.
+  [one-line install](#start-here-one-line-in-the-terminal) for Mac, Linux or Windows. The steps appear as `/app-idea` and so on.
 
 The first time a step opens its own reference pages, Claude Code asks
 whether it may read them, because they sit outside your project folder.
@@ -113,25 +141,35 @@ installs into every tool it finds.
 You can also use the community `skills` installer, which knows even more
 tools: `npx skills add stoicsoft/idea-to-launch`.
 
-## Mac and Linux without Node.js
+## Mac and Linux: choose tools or remove
+
+The [one-line install](#start-here-one-line-in-the-terminal) takes options
+after `bash -s --`:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+# Only some tools
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash -s -- --agent claude,cursor
+# Remove
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash -s -- --uninstall
 ```
 
-To pick tools: `… | bash -s -- --agent claude,cursor`. To remove:
-`… | bash -s -- --uninstall`.
+It uses Node.js when it's there and plain shell otherwise, so it works on a
+fresh Mac.
 
-## Windows
+## Windows: choose tools or remove
 
-In PowerShell:
+The [one-line install](#start-here-one-line-in-the-terminal) takes options
+this way:
 
 ```powershell
-irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+# Only some tools
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1))) -Agent claude,cursor
+# Remove
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1))) -Uninstall
 ```
 
-To pick tools or remove, download `install.ps1` and run
-`.\install.ps1 -Agent claude,cursor` or `.\install.ps1 -Uninstall`.
+It works in PowerShell 7 and in the Windows PowerShell 5.1 that comes with
+Windows, uses Node.js when it's there, and needs no admin rights.
 
 ## ChatGPT and other chat assistants
 
@@ -164,9 +202,9 @@ project.
 
 | | Command |
 |---|---|
-| Update | Run the same install command again. It replaces the old copy. |
-| See where it's installed | `npx github:stoicsoft/idea-to-launch list` |
-| Remove | `npx github:stoicsoft/idea-to-launch uninstall` (only removes folders this project installed) |
+| Update | Run the same install line again. It replaces the old copy. |
+| Remove | Mac and Linux: the line [with `--uninstall`](#mac-and-linux-choose-tools-or-remove). Windows: the line [with `-Uninstall`](#windows-choose-tools-or-remove). With Node.js: `npx github:stoicsoft/idea-to-launch uninstall`. Only folders this project installed are removed. |
+| See where it's installed | `npx github:stoicsoft/idea-to-launch list` (needs Node.js) |
 | Plugin installs | Claude Code: `/plugin uninstall idea-to-launch@idea-to-launch`; Codex: `codex plugin remove idea-to-launch@idea-to-launch` |
 
 Removing the skills never touches your projects or their `product/` notes.
@@ -218,11 +256,17 @@ it.
 
 ## Something went wrong?
 
-- **"command not found: npx"**: install Node.js (the LTS version) from
-  [nodejs.org](https://nodejs.org), or use the Mac/Linux or Windows
-  installer, which doesn't need it.
-- **"No AI tools found"**: your tool keeps its settings somewhere
-  unexpected. Name it with `--agent`, for example `--agent cursor`.
+- **"No AI tools found"**: open your AI coding tool once so it creates its
+  settings folder, then run the line again. If it still isn't found, name
+  it: [`--agent cursor`](#mac-and-linux-choose-tools-or-remove) on Mac and
+  Linux, [`-Agent cursor`](#windows-choose-tools-or-remove) on Windows.
+- **"command not found: npx"**: use the [one-line
+  install](#start-here-one-line-in-the-terminal) instead, which doesn't
+  need Node.js.
+- **Windows says running scripts is disabled**: the one-line install
+  doesn't need script permission, so paste it exactly as shown. If you
+  downloaded `install.ps1` and ran it as a file, run
+  `powershell -ExecutionPolicy Bypass -File install.ps1` instead.
 - **The skills don't show up**: restart the tool completely, or start a
   new chat or session. Then ask "What skills do you have?"
 - **"Skipped … a different skill with this name is already there"**: you

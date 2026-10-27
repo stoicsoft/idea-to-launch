@@ -39,26 +39,46 @@ Birkaç tur sonra elinde şunlar olur:
 
 ## Kurulum
 
-Kullandığın aracı seç. Her seçenek aynı becerileri kurar.
+Tek bir satırı kopyalayıp bilgisayarının terminaline yapıştır. Bu komut
+bilgisayarındaki yapay zekâ araçlarını (Claude Code, Codex, Cursor, Gemini CLI,
+Copilot ve [15 araç daha](../install.md#every-supported-tool)) bulur ve
+becerileri hepsine birden ekler. Yalnızca metin dosyalarını kopyalar, yönetici
+yetkisi gerektirmez ve istediğin zaman kaldırabilirsin.
 
-| Aracın | Nasıl kurulur |
-|---|---|
-| **Her araç, tek komut** ([Node.js](https://nodejs.org) gerekir) | `npx github:stoicsoft/idea-to-launch` yapay zekâ araçlarını bulur ve becerileri hepsine birden kurar |
-| **Mac veya Linux, Node.js olmadan** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, ardından `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (sohbet) veya claude.ai | [Releases](https://github.com/stoicsoft/idea-to-launch/releases) sayfasından zip dosyalarını indir, sonra her biri için **Settings → Capabilities → Skills → Upload skill** yolunu izle (Ayarlar → Yetenekler → Beceriler → Beceri yükle; [ayrıntılar](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (uygulama veya komut satırı) | `codex plugin marketplace add stoicsoft/idea-to-launch`, ardından `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Yukarıdaki tek komutluk kurulum ya da [tüm araçlar](../install.md) |
-| **ChatGPT veya başka bir sohbet asistanı** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) dosyasını bir projeye ya da kendi GPT'ne (custom GPT) yükle |
+**Mac'te** (ya da Linux'ta): **Terminal** uygulamasını aç (⌘ Space tuşlarına
+bas, `Terminal` yaz, Enter'a bas), bu satırı yapıştır ve Enter'a bas:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**Windows'ta:** **PowerShell** uygulamasını aç (Windows tuşuna bas,
+`PowerShell` yaz, Enter'a bas), bu satırı yapıştır ve Enter'a bas:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Sonra **yapay zekâ aracını yeniden başlat** (ya da yeni bir sohbet aç) ve şunu
 yaz:
 
 > İşletmem için bir uygulama yapmak istiyorum. Yardım eder misin?
 
-Her aracı, güncellemeyi ve kaldırmayı anlatan tam rehber
-[docs/install.md](../install.md) dosyasında.
+Node.js'i zaten kullanıyorsan `npx github:stoicsoft/idea-to-launch` de aynı
+işi yapar.
+
+### Diğer kurulum yolları
+
+| Aracın | Nasıl kurulur |
+|---|---|
+| **Claude Code**, eklenti olarak | `/plugin marketplace add stoicsoft/idea-to-launch`, ardından `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (uygulama veya komut satırı), eklenti olarak | `codex plugin marketplace add stoicsoft/idea-to-launch`, ardından `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, uzantı olarak | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (sohbet) veya claude.ai | Yukarıdaki komut becerileri buraya kuramaz. [Releases](https://github.com/stoicsoft/idea-to-launch/releases) sayfasından zip dosyalarını indir, sonra her biri için **Settings → Capabilities → Skills → Upload skill** yolunu izle (Ayarlar → Yetenekler → Beceriler → Beceri yükle; [ayrıntılar](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT veya başka bir sohbet asistanı** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) dosyasını bir projeye ya da kendi GPT'ne (custom GPT) yükle |
+
+Her aracı, becerilerin hangi araçlara kurulacağını seçmeyi, güncellemeyi ve
+kaldırmayı anlatan tam rehber [docs/install.md](../install.md) dosyasında.
 
 ## Adımlar
 

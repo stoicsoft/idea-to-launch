@@ -39,25 +39,46 @@ Setelah beberapa putaran, kamu akan punya:
 
 ## Cara memasang
 
-Pilih aplikasi AI yang kamu pakai. Semua cara memasang skill yang sama.
+Salin satu baris ke terminal di komputermu. Perintah ini mencari aplikasi AI
+yang ada di komputermu (Claude Code, Codex, Cursor, Gemini CLI, Copilot, dan
+[15 aplikasi lainnya](../install.md#every-supported-tool)) lalu menambahkan
+skill-nya ke semuanya. Perintah ini cuma menyalin file teks, tidak butuh hak
+admin, dan bisa kamu hapus kapan saja.
 
-| Aplikasi AI-mu | Cara memasang |
-|---|---|
-| **Aplikasi apa pun, satu perintah** (butuh [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` mencari aplikasi AI-mu dan memasang ke semuanya |
-| **Mac atau Linux, tanpa Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, lalu `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (chat) atau claude.ai | Unduh file zip dari [Releases](https://github.com/stoicsoft/idea-to-launch/releases), lalu untuk setiap file buka **Settings → Capabilities → Skills → Upload skill** (Pengaturan → Kemampuan → Skill → Unggah skill) ([detail](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (aplikasi atau CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, lalu `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Cara satu perintah di atas, atau lihat [semua aplikasi](../install.md) |
-| **ChatGPT atau asisten chat lain** | Unggah [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ke sebuah proyek atau GPT kustom |
+**Di Mac** (atau Linux): buka **Terminal** (tekan ⌘ Space, ketik
+`Terminal`, tekan Enter), tempel baris ini lalu tekan Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**Di Windows:** buka **PowerShell** (tekan tombol Windows, ketik
+`PowerShell`, tekan Enter), tempel baris ini lalu tekan Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Lalu **buka ulang aplikasi AI-mu** (atau mulai chat baru) dan tulis:
 
 > Saya ingin membuat aplikasi untuk usaha saya. Bisa bantu?
 
-Panduan lengkapnya, untuk semua aplikasi beserta cara memperbarui atau
-menghapusnya, ada di [docs/install.md](../install.md).
+Kalau kamu sudah memakai Node.js, `npx github:stoicsoft/idea-to-launch`
+melakukan hal yang sama.
+
+### Cara lain untuk memasang
+
+| Aplikasi AI-mu | Cara memasang |
+|---|---|
+| **Claude Code**, sebagai plugin | `/plugin marketplace add stoicsoft/idea-to-launch`, lalu `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (aplikasi atau CLI), sebagai plugin | `codex plugin marketplace add stoicsoft/idea-to-launch`, lalu `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, sebagai ekstensi | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (chat) atau claude.ai | Perintah di atas tidak bisa menjangkau keduanya. Unduh file zip dari [Releases](https://github.com/stoicsoft/idea-to-launch/releases), lalu untuk setiap file buka **Settings → Capabilities → Skills → Upload skill** (Pengaturan → Kemampuan → Skill → Unggah skill) ([detail](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT atau asisten chat lain** | Unggah [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ke sebuah proyek atau GPT kustom |
+
+Panduan lengkapnya, untuk semua aplikasi, cara memilih aplikasi mana yang
+mendapat skill, serta cara memperbarui atau menghapusnya, ada di
+[docs/install.md](../install.md).
 
 ## Langkah-langkahnya
 

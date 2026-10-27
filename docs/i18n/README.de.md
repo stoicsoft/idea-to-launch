@@ -40,26 +40,46 @@ Nach ein paar Runden hast du:
 
 ## Installation
 
-Wähl das Tool, das du nutzt. Jede Option installiert dieselben Skills.
+Kopier eine einzige Zeile in das Terminal deines Computers. Sie findet die
+KI-Tools auf deinem Computer (Claude Code, Codex, Cursor, Gemini CLI,
+Copilot und [15 weitere](../install.md#every-supported-tool)) und fügt
+allen die Skills hinzu. Sie kopiert nur Textdateien, braucht keine
+Administratorrechte, und du kannst alles jederzeit wieder entfernen.
 
-| Dein Tool | So installierst du es |
-|---|---|
-| **Jedes Tool, ein einziger Befehl** (braucht [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` findet deine KI-Tools und installiert sich in alle |
-| **Mac oder Linux, ohne Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, danach `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (Chat) oder claude.ai | Lade die ZIP-Dateien unter [Releases](https://github.com/stoicsoft/idea-to-launch/releases) herunter und geh dann für jede Datei auf **Settings → Capabilities → Skills → Upload skill** (Einstellungen → Funktionen → Skills → Skill hochladen) ([Details](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (App oder CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, danach `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Die Installation mit einem Befehl von oben, oder sieh dir [alle Tools](../install.md) an |
-| **ChatGPT oder ein anderer Chat-Assistent** | Lade [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) in ein Projekt oder einen eigenen GPT hoch |
+**Auf dem Mac** (oder unter Linux): Öffne das **Terminal** (drück ⌘ Space,
+tipp `Terminal` ein und drück Enter), füg diese Zeile ein und drück Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**Unter Windows:** Öffne **PowerShell** (drück die Windows-Taste, tipp
+`PowerShell` ein und drück Enter), füg diese Zeile ein und drück Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Starte dann **dein KI-Tool neu** (oder beginne einen neuen Chat) und sag:
 
 > Ich möchte eine App für mein Geschäft bauen. Kannst du mir helfen?
 
-Die vollständige Anleitung, mit allen Tools und wie du Idea to Launch
-aktualisierst oder wieder entfernst, findest du in
-[docs/install.md](../install.md).
+Wenn du Node.js schon nutzt, macht `npx github:stoicsoft/idea-to-launch`
+dasselbe.
+
+### Weitere Wege zur Installation
+
+| Dein Tool | So installierst du es |
+|---|---|
+| **Claude Code**, als Plugin | `/plugin marketplace add stoicsoft/idea-to-launch`, danach `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (App oder CLI), als Plugin | `codex plugin marketplace add stoicsoft/idea-to-launch`, danach `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, als Erweiterung | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (Chat) oder claude.ai | Der Befehl oben erreicht diese beiden nicht. Lade die ZIP-Dateien unter [Releases](https://github.com/stoicsoft/idea-to-launch/releases) herunter und geh dann für jede Datei auf **Settings → Capabilities → Skills → Upload skill** (Einstellungen → Funktionen → Skills → Skill hochladen) ([Details](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT oder ein anderer Chat-Assistent** | Lade [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) in ein Projekt oder einen eigenen GPT hoch |
+
+Die vollständige Anleitung, mit allen Tools, wie du auswählst, welche Tools
+die Skills bekommen, und wie du sie aktualisierst oder wieder entfernst,
+findest du in [docs/install.md](../install.md).
 
 ## Die Schritte
 

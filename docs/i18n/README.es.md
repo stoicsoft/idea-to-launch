@@ -40,26 +40,45 @@ Unas cuantas rondas después, tienes:
 
 ## Instalación
 
-Elige la herramienta que usas. Todas las opciones instalan las mismas
-habilidades.
+Copia una sola línea en la terminal de tu computadora. Busca las
+herramientas de IA que tienes en tu computadora (Claude Code, Codex, Cursor,
+Gemini CLI, Copilot y [15 más](../install.md#every-supported-tool)) y agrega
+las habilidades a todas ellas. Solo copia archivos de texto, no necesita
+permisos de administrador y puedes quitarlo cuando quieras.
 
-| Tu herramienta | Cómo instalar |
-|---|---|
-| **Cualquier herramienta, con un solo comando** (necesita [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` encuentra tus herramientas de IA y se instala en todas |
-| **Mac o Linux, sin Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch` y luego `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (chat) o claude.ai | Descarga los archivos zip desde [Releases](https://github.com/stoicsoft/idea-to-launch/releases) y luego, para cada uno, ve a **Settings → Capabilities → Skills → Upload skill** (Configuración → Capacidades → Habilidades → Subir habilidad) ([más detalles](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (app o CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch` y luego `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | La instalación con un solo comando de arriba, o consulta [todas las herramientas](../install.md) |
-| **ChatGPT o cualquier otro asistente de chat** | Sube [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) a un proyecto o a un GPT personalizado |
+**En una Mac** (o Linux): abre **Terminal** (presiona ⌘ Space, escribe
+`Terminal` y presiona Enter), pega esta línea y presiona Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**En Windows:** abre **PowerShell** (presiona la tecla de Windows, escribe
+`PowerShell` y presiona Enter), pega esta línea y presiona Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Luego **reinicia tu herramienta de IA** (o abre un chat nuevo) y dile:
 
 > Quiero crear una app para mi negocio. ¿Me ayudas?
 
-La guía completa, con todas las herramientas y cómo actualizar o desinstalar
-Idea to Launch, está en [docs/install.md](../install.md).
+Si ya usas Node.js, `npx github:stoicsoft/idea-to-launch` hace lo mismo.
+
+### Otras formas de instalar
+
+| Tu herramienta | Cómo instalar |
+|---|---|
+| **Claude Code**, como plugin | `/plugin marketplace add stoicsoft/idea-to-launch` y luego `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (app o CLI), como plugin | `codex plugin marketplace add stoicsoft/idea-to-launch` y luego `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, como extensión | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (chat) o claude.ai | El comando de arriba no llega a estas apps. Descarga los archivos zip desde [Releases](https://github.com/stoicsoft/idea-to-launch/releases) y luego, para cada uno, ve a **Settings → Capabilities → Skills → Upload skill** (Configuración → Capacidades → Habilidades → Subir habilidad) ([más detalles](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT o cualquier otro asistente de chat** | Sube [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) a un proyecto o a un GPT personalizado |
+
+La guía completa, con todas las herramientas, cómo elegir a qué herramientas
+se agregan las habilidades y cómo actualizarlas o quitarlas, está en
+[docs/install.md](../install.md).
 
 ## Los pasos
 

@@ -39,27 +39,46 @@ Kilka rund później masz:
 
 ## Instalacja
 
-Wybierz narzędzie, z którego korzystasz. Każda opcja instaluje te same
-umiejętności.
+Skopiuj jedną linijkę do terminala na swoim komputerze. To polecenie samo
+znajdzie zainstalowane u ciebie narzędzia AI (Claude Code, Codex, Cursor,
+Gemini CLI, Copilot i [15 innych](../install.md#every-supported-tool)) i doda
+umiejętności do wszystkich naraz. Kopiuje tylko pliki tekstowe, nie wymaga
+uprawnień administratora, a usunąć wszystko możesz w dowolnej chwili.
 
-| Twoje narzędzie | Jak zainstalować |
-|---|---|
-| **Dowolne narzędzie, jedno polecenie** (wymaga [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` wyszukuje twoje narzędzia AI i instaluje umiejętności we wszystkich naraz |
-| **Mac lub Linux, bez Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, a potem `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (czat) lub claude.ai | Pobierz pliki zip ze strony [Releases](https://github.com/stoicsoft/idea-to-launch/releases), a potem dodaj każdy z nich przez **Settings → Capabilities → Skills → Upload skill** („Ustawienia → Możliwości → Umiejętności → Prześlij umiejętność”; [szczegóły](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (aplikacja lub wiersz poleceń) | `codex plugin marketplace add stoicsoft/idea-to-launch`, a potem `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Instalacja jednym poleceniem (powyżej) albo [instrukcje dla każdego narzędzia](../install.md) |
-| **ChatGPT lub inny asystent czatowy** | Prześlij [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) do projektu albo do własnego GPT (custom GPT) |
+**Na Macu** (lub w Linuksie): otwórz **Terminal** (naciśnij ⌘ Space, wpisz
+`Terminal`, naciśnij Enter), wklej tę linijkę i naciśnij Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**W Windowsie:** otwórz **PowerShell** (naciśnij klawisz Windows, wpisz
+`PowerShell`, naciśnij Enter), wklej tę linijkę i naciśnij Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Potem **uruchom ponownie swoje narzędzie AI** (albo zacznij nowy czat) i
 napisz:
 
 > Chcę zbudować aplikację dla swojej firmy. Pomożesz?
 
-Pełny przewodnik – ze wszystkimi narzędziami oraz opisem aktualizacji i
-usuwania – znajdziesz w [docs/install.md](../install.md).
+Jeśli już używasz Node.js, `npx github:stoicsoft/idea-to-launch` robi to samo.
+
+### Inne sposoby instalacji
+
+| Twoje narzędzie | Jak zainstalować |
+|---|---|
+| **Claude Code**, jako wtyczka | `/plugin marketplace add stoicsoft/idea-to-launch`, a potem `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (aplikacja lub wiersz poleceń), jako wtyczka | `codex plugin marketplace add stoicsoft/idea-to-launch`, a potem `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, jako rozszerzenie | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (czat) lub claude.ai | Polecenie powyżej nie zainstaluje tu umiejętności. Pobierz pliki zip ze strony [Releases](https://github.com/stoicsoft/idea-to-launch/releases), a potem dodaj każdy z nich przez **Settings → Capabilities → Skills → Upload skill** („Ustawienia → Możliwości → Umiejętności → Prześlij umiejętność”; [szczegóły](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT lub inny asystent czatowy** | Prześlij [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) do projektu albo do własnego GPT (custom GPT) |
+
+Pełny przewodnik – ze wszystkimi narzędziami, opisem, jak wybrać, które
+narzędzia dostaną umiejętności, oraz jak je zaktualizować lub usunąć –
+znajdziesz w [docs/install.md](../install.md).
 
 ## Kroki
 

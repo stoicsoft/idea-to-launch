@@ -24,24 +24,37 @@ Idea to Launch คือชุดสกิลฟรีสำหรับผู�
 
 ## ติดตั้ง
 
-เลือกเครื่องมือที่คุณใช้ ทุกวิธีติดตั้งสกิลชุดเดียวกัน
+คัดลอกคำสั่งบรรทัดเดียวไปวางในเทอร์มินัลของคอมพิวเตอร์ คำสั่งนี้จะค้นหาเครื่องมือ AI ในคอมพิวเตอร์ของคุณ (Claude Code, Codex, Cursor, Gemini CLI, Copilot และ[อีก 15 ตัว](../install.md#every-supported-tool)) แล้วติดตั้งสกิลให้ครบทุกตัว คำสั่งนี้แค่คัดลอกไฟล์ข้อความ ไม่ต้องใช้สิทธิ์ผู้ดูแลระบบ และคุณถอนการติดตั้งได้ทุกเมื่อ
 
-| เครื่องมือของคุณ | วิธีติดตั้ง |
-|---|---|
-| **เครื่องมือไหนก็ได้ ด้วยคำสั่งเดียว** (ต้องมี [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` จะค้นหาเครื่องมือ AI ของคุณ แล้วติดตั้งให้ครบทุกตัว |
-| **Mac หรือ Linux ที่ไม่มี Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch` จากนั้น `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (แชต) หรือ claude.ai | ดาวน์โหลดไฟล์ zip จาก [Releases](https://github.com/stoicsoft/idea-to-launch/releases) (หน้ารวมเวอร์ชันที่เผยแพร่) แล้วอัปโหลดทีละไฟล์ที่ **Settings → Capabilities → Skills → Upload skill** (การตั้งค่า → ความสามารถ → สกิล → อัปโหลดสกิล) ([ดูรายละเอียด](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (แอปหรือแบบพิมพ์คำสั่ง) | `codex plugin marketplace add stoicsoft/idea-to-launch` จากนั้น `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | ใช้วิธีติดตั้งด้วยคำสั่งเดียวด้านบน หรือดู[ทุกเครื่องมือ](../install.md) |
-| **ChatGPT หรือผู้ช่วยแชตอื่น ๆ** | อัปโหลด [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ไปไว้ในโปรเจกต์หรือ GPT ที่สร้างเอง |
+**บน Mac** (หรือ Linux): กด ⌘ Space พิมพ์ `Terminal` แล้วกด Enter เพื่อเปิด **Terminal** (เทอร์มินัล) จากนั้นวางบรรทัดนี้ลงไป แล้วกด Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**บน Windows:** กดปุ่ม Windows พิมพ์ `PowerShell` แล้วกด Enter เพื่อเปิด **PowerShell** จากนั้นวางบรรทัดนี้ลงไป แล้วกด Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 จากนั้น**รีสตาร์ตเครื่องมือ AI ของคุณ** (หรือเริ่มแชตใหม่) แล้วพิมพ์ว่า:
 
 > อยากสร้างแอปสำหรับธุรกิจของตัวเอง ช่วยหน่อยได้ไหม
 
-ดูคู่มือฉบับเต็มได้ที่ [docs/install.md](../install.md) มีครบทุกเครื่องมือ รวมถึงวิธีอัปเดตหรือถอนการติดตั้ง
+ถ้าคุณใช้ Node.js อยู่แล้ว คำสั่ง `npx github:stoicsoft/idea-to-launch` ก็ทำแบบเดียวกันได้
+
+### วิธีติดตั้งแบบอื่น
+
+| เครื่องมือของคุณ | วิธีติดตั้ง |
+|---|---|
+| **Claude Code** แบบปลั๊กอิน | `/plugin marketplace add stoicsoft/idea-to-launch` จากนั้น `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (แอปหรือแบบพิมพ์คำสั่ง) แบบปลั๊กอิน | `codex plugin marketplace add stoicsoft/idea-to-launch` จากนั้น `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI** แบบส่วนขยาย | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (แชต) หรือ claude.ai | คำสั่งด้านบนติดตั้งให้สองที่นี้ไม่ได้ ดาวน์โหลดไฟล์ zip จาก [Releases](https://github.com/stoicsoft/idea-to-launch/releases) (หน้ารวมเวอร์ชันที่เผยแพร่) แล้วอัปโหลดทีละไฟล์ที่ **Settings → Capabilities → Skills → Upload skill** (การตั้งค่า → ความสามารถ → สกิล → อัปโหลดสกิล) ([ดูรายละเอียด](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT หรือผู้ช่วยแชตอื่น ๆ** | อัปโหลด [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ไปไว้ในโปรเจกต์หรือ GPT ที่สร้างเอง |
+
+ดูคู่มือฉบับเต็มได้ที่ [docs/install.md](../install.md) มีครบทุกเครื่องมือ วิธีเลือกว่าจะติดตั้งสกิลให้เครื่องมือไหนบ้าง รวมถึงวิธีอัปเดตหรือถอนการติดตั้ง
 
 ## ขั้นตอน
 

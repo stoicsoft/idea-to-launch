@@ -41,27 +41,50 @@ Quelques échanges plus tard, vous avez :
 
 ## Installation
 
-Choisissez l'outil que vous utilisez. Chaque option installe les mêmes
-compétences.
+Copiez une seule ligne dans le terminal de votre ordinateur. Elle trouve les
+outils d'IA présents sur votre ordinateur (Claude Code, Codex, Cursor,
+Gemini CLI, Copilot et [15 autres](../install.md#every-supported-tool)) et
+ajoute les compétences à chacun d'eux. Elle ne copie que des fichiers texte,
+ne demande aucun droit d'administrateur, et vous pouvez tout retirer quand
+vous le voulez.
 
-| Votre outil | Comment l'installer |
-|---|---|
-| **N'importe quel outil, une seule commande** (nécessite [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` trouve vos outils d'IA et s'installe dans chacun d'eux |
-| **Mac ou Linux, sans Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, puis `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (chat) ou claude.ai | Téléchargez les fichiers zip depuis [Releases](https://github.com/stoicsoft/idea-to-launch/releases), puis, pour chacun, allez dans **Settings → Capabilities → Skills → Upload skill** (Paramètres → Capacités → Compétences → Importer une compétence) ([détails](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (app ou CLI) | `codex plugin marketplace add stoicsoft/idea-to-launch`, puis `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | L'installation en une seule commande ci-dessus, ou consultez [la liste de tous les outils](../install.md) |
-| **ChatGPT ou tout autre assistant de chat** | Importez [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) dans un projet ou un GPT personnalisé |
+**Sur Mac** (ou Linux) : ouvrez **Terminal** (appuyez sur ⌘ Space,
+tapez `Terminal`, puis appuyez sur Entrée), collez cette ligne et appuyez
+sur Entrée :
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**Sur Windows :** ouvrez **PowerShell** (appuyez sur la touche Windows,
+tapez `PowerShell`, puis appuyez sur Entrée), collez cette ligne et appuyez
+sur Entrée :
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Ensuite, **redémarrez votre outil d'IA** (ou ouvrez une nouvelle
 conversation) et dites :
 
 > Je voudrais créer une application pour mon entreprise. Vous pouvez m'aider ?
 
-Le guide complet, avec tous les outils et la façon de mettre à jour ou de
-désinstaller Idea to Launch, se trouve dans [docs/install.md](../install.md).
+Si vous utilisez déjà Node.js, `npx github:stoicsoft/idea-to-launch` fait
+la même chose.
+
+### Autres façons d'installer
+
+| Votre outil | Comment l'installer |
+|---|---|
+| **Claude Code**, sous forme de plugin | `/plugin marketplace add stoicsoft/idea-to-launch`, puis `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (app ou CLI), sous forme de plugin | `codex plugin marketplace add stoicsoft/idea-to-launch`, puis `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, sous forme d'extension | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (chat) ou claude.ai | La commande ci-dessus ne peut pas les atteindre. Téléchargez les fichiers zip depuis [Releases](https://github.com/stoicsoft/idea-to-launch/releases), puis, pour chacun, allez dans **Settings → Capabilities → Skills → Upload skill** (Paramètres → Capacités → Compétences → Importer une compétence) ([détails](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT ou tout autre assistant de chat** | Importez [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) dans un projet ou un GPT personnalisé |
+
+Le guide complet, avec tous les outils, comment choisir les outils qui
+reçoivent les compétences, et comment les mettre à jour ou les retirer, se
+trouve dans [docs/install.md](../install.md).
 
 ## Les étapes
 

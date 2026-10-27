@@ -39,26 +39,46 @@ _Это перевод. Основной текст — [английская в
 
 ## Установка
 
-Выберите инструмент, которым пользуетесь. Любой вариант устанавливает одни и те
-же навыки.
+Скопируйте одну строку в терминал на своём компьютере. Эта команда сама найдёт
+установленные у вас ИИ-инструменты (Claude Code, Codex, Cursor, Gemini CLI,
+Copilot и [ещё 15](../install.md#every-supported-tool)) и добавит навыки во все
+сразу. Она только копирует текстовые файлы, не требует прав администратора, а
+удалить всё можно в любой момент.
 
-| Ваш инструмент | Как установить |
-|---|---|
-| **Любой инструмент, одна команда** (нужен [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` находит ваши ИИ-инструменты и устанавливает навыки во все сразу |
-| **Mac или Linux без Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, затем `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (чат) или claude.ai | Скачайте zip-архивы со страницы [Releases](https://github.com/stoicsoft/idea-to-launch/releases), затем загрузите каждый через **Settings → Capabilities → Skills → Upload skill** («Настройки → Возможности → Навыки → Загрузить навык»; [подробнее](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (приложение или командная строка) | `codex plugin marketplace add stoicsoft/idea-to-launch`, затем `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Установка одной командой (см. выше) или [инструкции для каждого инструмента](../install.md) |
-| **ChatGPT или любой другой чат-ассистент** | Загрузите [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) в проект или в свой GPT (custom GPT) |
+**На Mac** (или Linux): откройте **Terminal** («Терминал»; нажмите ⌘ Space,
+введите `Terminal` и нажмите Enter), вставьте эту строку и нажмите Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**На Windows:** откройте **PowerShell** (нажмите клавишу Windows, введите
+`PowerShell` и нажмите Enter), вставьте эту строку и нажмите Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Затем **перезапустите свой ИИ-инструмент** (или начните новый чат) и напишите:
 
 > Хочу сделать приложение для своего бизнеса. Можешь помочь?
 
-Полное руководство — со всеми инструментами, а также о том, как обновить или
-удалить навыки, — в [docs/install.md](../install.md).
+Если вы уже пользуетесь Node.js, `npx github:stoicsoft/idea-to-launch` делает
+то же самое.
+
+### Другие способы установки
+
+| Ваш инструмент | Как установить |
+|---|---|
+| **Claude Code**, как плагин | `/plugin marketplace add stoicsoft/idea-to-launch`, затем `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (приложение или командная строка), как плагин | `codex plugin marketplace add stoicsoft/idea-to-launch`, затем `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, как расширение | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (чат) или claude.ai | Команда выше сюда навыки не установит. Скачайте zip-архивы со страницы [Releases](https://github.com/stoicsoft/idea-to-launch/releases), затем загрузите каждый через **Settings → Capabilities → Skills → Upload skill** («Настройки → Возможности → Навыки → Загрузить навык»; [подробнее](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT или любой другой чат-ассистент** | Загрузите [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) в проект или в свой GPT (custom GPT) |
+
+Полное руководство — со всеми инструментами, а также о том, как выбрать, в какие
+инструменты добавить навыки, и как их обновить или удалить, — в
+[docs/install.md](../install.md).
 
 ## Шаги
 

@@ -37,26 +37,46 @@ _Це переклад. Основний текст — [англійська в
 
 ## Встановлення
 
-Оберіть інструмент, яким користуєтеся. Кожен варіант встановлює ті самі
-навички.
+Скопіюйте один рядок у термінал на своєму комп’ютері. Ця команда сама знайде
+встановлені у вас ШІ-інструменти (Claude Code, Codex, Cursor, Gemini CLI,
+Copilot та [ще 15](../install.md#every-supported-tool)) і додасть навички в усі
+одразу. Вона лише копіює текстові файли, не потребує прав адміністратора, а
+видалити все можна будь-коли.
 
-| Ваш інструмент | Як встановити |
-|---|---|
-| **Будь-який інструмент, одна команда** (потрібен [Node.js](https://nodejs.org)) | `npx github:stoicsoft/idea-to-launch` знаходить ваші ШІ-інструменти й встановлює навички в усі одразу |
-| **Mac або Linux без Node.js** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch`, потім `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (чат) або claude.ai | Завантажте zip-архіви зі сторінки [Releases](https://github.com/stoicsoft/idea-to-launch/releases), потім додайте кожен через **Settings → Capabilities → Skills → Upload skill** («Налаштування → Можливості → Навички → Завантажити навичку»; [докладніше](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (застосунок або командний рядок) | `codex plugin marketplace add stoicsoft/idea-to-launch`, потім `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Встановлення однією командою (див. вище) або [інструкції для кожного інструмента](../install.md) |
-| **ChatGPT чи будь-який інший чат-асистент** | Завантажте [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) у проєкт або у власний GPT (custom GPT) |
+**На Mac** (або Linux): відкрийте **Terminal** («Термінал»; натисніть ⌘ Space,
+введіть `Terminal` і натисніть Enter), вставте цей рядок і натисніть Enter:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**На Windows:** відкрийте **PowerShell** (натисніть клавішу Windows, введіть
+`PowerShell` і натисніть Enter), вставте цей рядок і натисніть Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 Потім **перезапустіть свій ШІ-інструмент** (або почніть новий чат) і напишіть:
 
 > Хочу створити застосунок для свого бізнесу. Допоможеш?
 
-Повний посібник — з усіма інструментами, а також про те, як оновити чи
-видалити навички, — у [docs/install.md](../install.md).
+Якщо ви вже користуєтеся Node.js, `npx github:stoicsoft/idea-to-launch` робить
+те саме.
+
+### Інші способи встановлення
+
+| Ваш інструмент | Як встановити |
+|---|---|
+| **Claude Code**, як плагін | `/plugin marketplace add stoicsoft/idea-to-launch`, потім `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (застосунок або командний рядок), як плагін | `codex plugin marketplace add stoicsoft/idea-to-launch`, потім `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, як розширення | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (чат) або claude.ai | Команда вище сюди навички не встановить. Завантажте zip-архіви зі сторінки [Releases](https://github.com/stoicsoft/idea-to-launch/releases), потім додайте кожен через **Settings → Capabilities → Skills → Upload skill** («Налаштування → Можливості → Навички → Завантажити навичку»; [докладніше](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT чи будь-який інший чат-асистент** | Завантажте [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) у проєкт або у власний GPT (custom GPT) |
+
+Повний посібник — з усіма інструментами, а також про те, як обрати, в які
+інструменти додати навички, і як їх оновити чи видалити, — у
+[docs/install.md](../install.md).
 
 ## Кроки
 

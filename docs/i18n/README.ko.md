@@ -24,24 +24,37 @@ Idea to Launch는 지금 쓰고 계신 AI 어시스턴트에 더하는 무료 �
 
 ## 설치
 
-쓰고 계신 도구를 고르세요. 어떤 방법이든 같은 스킬이 설치돼요.
+컴퓨터의 터미널에 한 줄만 복사해 넣으면 돼요. 컴퓨터에 있는 AI 도구(Claude Code, Codex, Cursor, Gemini CLI, Copilot, 그리고 [그 밖의 15개](../install.md#every-supported-tool))를 찾아서 모두에 스킬을 설치해요. 텍스트 파일만 복사하고, 관리자 권한도 필요 없고, 언제든 삭제할 수 있어요.
 
-| 사용하시는 도구 | 설치 방법 |
-|---|---|
-| **어떤 도구든, 명령어 한 줄로** ([Node.js](https://nodejs.org) 필요) | `npx github:stoicsoft/idea-to-launch` 명령어가 AI 도구를 찾아서 모두에 설치해요 |
-| **Mac이나 Linux, Node.js 없이** | `curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add stoicsoft/idea-to-launch` 다음에 `/plugin install idea-to-launch@idea-to-launch` |
-| **Claude Desktop** (채팅) 또는 claude.ai | [Releases](https://github.com/stoicsoft/idea-to-launch/releases)(배포 페이지)에서 zip 파일을 내려받은 다음, 파일마다 **Settings → Capabilities → Skills → Upload skill**(설정 → 기능 → 스킬 → 스킬 업로드)에서 올려 주세요 ([자세히 보기](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (앱 또는 명령줄 버전) | `codex plugin marketplace add stoicsoft/idea-to-launch` 다음에 `codex plugin add idea-to-launch@idea-to-launch` |
-| **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | 위의 명령어 한 줄 설치를 쓰시거나, [모든 도구](../install.md)를 확인하세요 |
-| **ChatGPT나 다른 채팅 어시스턴트** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 파일을 프로젝트나 맞춤형 GPT에 올려 주세요 |
+**Mac에서는** (또는 Linux): ⌘ Space를 누르고 `Terminal`을 입력한 다음 Enter 키를 눌러 **Terminal**(터미널)을 여세요. 아래 한 줄을 붙여 넣고 Enter 키를 누르세요:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.sh | bash
+```
+
+**Windows에서는:** Windows 키를 누르고 `PowerShell`을 입력한 다음 Enter 키를 눌러 **PowerShell**을 여세요. 아래 한 줄을 붙여 넣고 Enter 키를 누르세요:
+
+```powershell
+irm https://raw.githubusercontent.com/stoicsoft/idea-to-launch/main/install.ps1 | iex
+```
 
 그다음 **AI 도구를 다시 시작**하고(또는 새 채팅을 열고) 이렇게 말해 보세요:
 
 > 제 사업에 쓸 앱을 만들고 싶어요. 도와주실 수 있나요?
 
-도구별 설치 방법과 업데이트·삭제 방법까지 담긴 전체 안내는 [docs/install.md](../install.md)에 있어요.
+이미 Node.js를 쓰고 계신다면 `npx github:stoicsoft/idea-to-launch`로도 똑같이 설치할 수 있어요.
+
+### 다른 설치 방법
+
+| 사용하시는 도구 | 설치 방법 |
+|---|---|
+| **Claude Code**, 플러그인으로 | `/plugin marketplace add stoicsoft/idea-to-launch` 다음에 `/plugin install idea-to-launch@idea-to-launch` |
+| **Codex** (앱 또는 명령줄 버전), 플러그인으로 | `codex plugin marketplace add stoicsoft/idea-to-launch` 다음에 `codex plugin add idea-to-launch@idea-to-launch` |
+| **Gemini CLI**, 확장 프로그램으로 | `gemini extensions install https://github.com/stoicsoft/idea-to-launch` |
+| **Claude Desktop** (채팅) 또는 claude.ai | 위 명령어로는 여기에 설치할 수 없어요. [Releases](https://github.com/stoicsoft/idea-to-launch/releases)(배포 페이지)에서 zip 파일을 내려받은 다음, 파일마다 **Settings → Capabilities → Skills → Upload skill**(설정 → 기능 → 스킬 → 스킬 업로드)에서 올려 주세요 ([자세히 보기](../install.md#claude-desktop-and-claudeai)) |
+| **ChatGPT나 다른 채팅 어시스턴트** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 파일을 프로젝트나 맞춤형 GPT에 올려 주세요 |
+
+도구별 설치 방법, 스킬을 설치할 도구를 고르는 방법, 업데이트·삭제 방법까지 담긴 전체 안내는 [docs/install.md](../install.md)에 있어요.
 
 ## 단계
 
