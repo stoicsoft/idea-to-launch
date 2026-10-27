@@ -8,6 +8,8 @@ the method, the judgement and the memory.
 
 ## The journey
 
+![Six steps from idea to go live, each with the page it saves](images/journey.png)
+
 ```
  idea ──► plan ──► look ──► build ──► check ──► go live
   │        │        │        │         │          │

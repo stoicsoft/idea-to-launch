@@ -2,6 +2,8 @@
 
 **Turn your idea into working software, without learning to code.**
 
+![A chat where someone describes their nail salon idea and the assistant asks a first question with a recommended answer, above the six steps from idea to go live](docs/images/intro.png)
+
 Idea to Launch is a free set of skills for the AI assistant you already
 use: Claude, Codex, Cursor, Gemini, GitHub Copilot and
 [15 more tools](docs/install.md#every-supported-tool). Describe your idea in
@@ -56,6 +58,8 @@ The full guide, with every tool and how to update or remove it, is in
 
 ## The steps
 
+![Six steps: idea, plan, look, build, check and go live, each with the page it saves in the product folder](docs/images/journey.png)
+
 You never have to call these by name. Just say what you want, and the
 assistant picks the right step. If you prefer, you can call a step
 directly, for example `/app-idea` in Claude Code or Cursor.
@@ -73,6 +77,8 @@ directly, for example `/app-idea` in Claude Code or Cursor.
 | **app-launch** | Puts it online safely, with your approval at every one-way step | "Put it online" |
 
 ## Your project remembers
+
+![The same kind of question asked in Vietnamese, Spanish and Japanese, next to a saved progress.md page](docs/images/languages.png)
 
 Everything important is saved as simple pages in a `product/` folder inside
 your project: the brief, the plan, the look, decisions, check results and

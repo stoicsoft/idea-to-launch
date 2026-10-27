@@ -1,5 +1,7 @@
 # Install Idea to Launch
 
+![Install options for any tool, Claude Code, Codex, Gemini CLI, Claude Desktop and ChatGPT, then restart and say what you want to build](images/install.png)
+
 Idea to Launch is a folder of nine skills: plain-text instructions your AI
 assistant reads when they're useful. Installing means copying that folder
 to where your AI tool looks for skills. Nothing runs in the background,
