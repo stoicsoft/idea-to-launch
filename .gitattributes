@@ -1,0 +1,5 @@
+# LF everywhere: the build compares generated files byte for byte, and
+# install.sh has to run under bash even when the repo is cloned on Windows.
+* text=auto eol=lf
+*.png binary
+*.zip binary
