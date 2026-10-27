@@ -62,10 +62,13 @@ bigger. A failed quick change costs more than a short plan. If two kinds of
 help fit, ask one question, not three.
 
 A new idea always goes through app-idea and app-plan before building,
-because building the wrong thing is the most expensive mistake. There are
-two exceptions. If they give a fully specified small task, do it. If they
-say "just build it", ask the single most important question once, then
-move on and record your assumptions.
+because building the wrong thing is the most expensive mistake. If they
+give a fully specified small task, just do it. If they say "just build it"
+or "you decide", ask the single most important question once, then make
+the remaining choices yourself and record each one as an "I assumed…"
+line. Handing you the choices is not approving a plan: still show the
+one-sentence reframe and a short plan together in one message, and start
+building only after their yes.
 
 ## 3. Know where you are running
 
@@ -89,12 +92,15 @@ Check what you can actually do before promising anything.
 
 ## 4. Keep the project moving
 
-- At the end of every step, update `product/progress.md`: where we are,
-  the next step, what is waiting on them, and one log line.
+- At the end of every step, update `product/progress.md` in the format in
+  project-memory.md (keep its five top lines: talk language, app language,
+  stage, saving versions, updated): where we are, the next step, what is
+  waiting on them, and one log line.
 - Each step ends with what they can do now, in a few short lines (see
   talking-rules.md §6).
-- Never start building before a plan is approved, unless it is a quick
-  change or they explicitly waived the plan for a small task. Never put
+- Never start building a new app or feature before they have said yes to
+  a plan. "You decide" hands you the choices, not the approval. The only
+  exception is a small, fully specified change. Never put
   anything on the internet, buy anything, or create accounts for them
   without an explicit yes for that exact action.
 - If they come back after a break, start from step 1.

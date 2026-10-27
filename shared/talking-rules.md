@@ -130,6 +130,8 @@ back to you.
 - **"Just build it" / "you decide":** ask the single most important
   remaining question once. If they say it again, stop asking, use your
   recommendations, and list them as "I assumed…" lines they can flip later.
+  This skips questions, not approvals: they still say yes to the reframe
+  and the plan before you build (one yes for both is fine).
 
 ## 4. Doors: what to ask and what to just decide
 
