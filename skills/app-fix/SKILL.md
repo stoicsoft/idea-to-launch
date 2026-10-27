@@ -3,7 +3,7 @@ name: app-fix
 description: Fix something broken in an app (an error, a blank page, a button that does nothing, a failing check) by finding the real cause first, fixing only that, and proving it works.
 license: MIT
 metadata:
-  suite: software-builder
+  suite: idea-to-launch
   version: "1.0.0"
 ---
 

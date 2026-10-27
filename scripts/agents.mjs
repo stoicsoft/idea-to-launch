@@ -38,4 +38,4 @@ export const AGENTS = [
 export const SKILLS = ['app-builder', 'app-idea', 'app-plan', 'app-design', 'app-build', 'app-change', 'app-fix', 'app-review', 'app-launch']
 
 // Every SKILL.md carries this in its metadata; uninstall only removes folders that do.
-export const SUITE = 'software-builder'
+export const SUITE = 'idea-to-launch'

@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **Zamień swój pomysł w działający program – bez nauki programowania.**
 
-Software Builder to darmowy zestaw umiejętności dla asystenta AI, z którego już
+Idea to Launch to darmowy zestaw umiejętności dla asystenta AI, z którego już
 korzystasz: Claude, Codex, Cursor, Gemini, GitHub Copilot i
 [15 innych narzędzi](../install.md#every-supported-tool). Opisz swój pomysł
 własnymi słowami, w swoim języku. Asystent zada ci kilka trafnych pytań,
@@ -44,14 +44,14 @@ umiejętności.
 
 | Twoje narzędzie | Jak zainstalować |
 |---|---|
-| **Dowolne narzędzie, jedno polecenie** (wymaga [Node.js](https://nodejs.org)) | `npx github:OWNER/REPO` wyszukuje twoje narzędzia AI i instaluje umiejętności we wszystkich naraz |
-| **Mac lub Linux, bez Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`, a potem `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (czat) lub claude.ai | Pobierz pliki zip ze strony [Releases](https://github.com/OWNER/REPO/releases), a potem dodaj każdy z nich przez **Settings → Capabilities → Skills → Upload skill** („Ustawienia → Możliwości → Umiejętności → Prześlij umiejętność”; [szczegóły](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (aplikacja lub wiersz poleceń) | `codex plugin marketplace add OWNER/REPO`, a potem `codex plugin add software-builder@software-builder` |
+| **Dowolne narzędzie, jedno polecenie** (wymaga [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` wyszukuje twoje narzędzia AI i instaluje umiejętności we wszystkich naraz |
+| **Mac lub Linux, bez Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, a potem `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (czat) lub claude.ai | Pobierz pliki zip ze strony [Releases](https://github.com/OWNER/idea-to-launch/releases), a potem dodaj każdy z nich przez **Settings → Capabilities → Skills → Upload skill** („Ustawienia → Możliwości → Umiejętności → Prześlij umiejętność”; [szczegóły](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (aplikacja lub wiersz poleceń) | `codex plugin marketplace add OWNER/idea-to-launch`, a potem `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Instalacja jednym poleceniem (powyżej) albo [instrukcje dla każdego narzędzia](../install.md) |
-| **ChatGPT lub inny asystent czatowy** | Prześlij [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) do projektu albo do własnego GPT (custom GPT) |
+| **ChatGPT lub inny asystent czatowy** | Prześlij [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) do projektu albo do własnego GPT (custom GPT) |
 
 Potem **uruchom ponownie swoje narzędzie AI** (albo zacznij nowy czat) i
 napisz:
@@ -95,7 +95,7 @@ zachowania.
   a może to być nawet kilka języków naraz.
 - Kod pozostaje po angielsku, żeby później każdy programista mógł go przejąć.
 
-Software Builder jest testowany w 20 językach: English, 简体中文, 繁體中文, Español,
+Idea to Launch jest testowany w 20 językach: English, 简体中文, 繁體中文, Español,
 हिन्दी, العربية, Português, Français, Русский, 日本語, Deutsch, Bahasa Indonesia,
 Tiếng Việt, 한국어, Türkçe, Italiano, ไทย, Polski, Nederlands i
 Українська. Inne zwykle też działają.

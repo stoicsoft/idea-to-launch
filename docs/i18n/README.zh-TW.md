@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **不用學寫程式，也能把你的點子變成真正能用的軟體。**
 
-Software Builder 是一套免費的技能，裝進你已經在用的 AI 助理就能用：Claude、Codex、Cursor、Gemini、GitHub Copilot，還有[另外 15 款工具](../install.md#every-supported-tool)。用你自己的話、你自己的語言說出點子就好。助理會先問你幾個關鍵問題，寫一頁計畫請你確認，接著動手做出來，像真正的顧客一樣檢查一遍，再幫你把它放上網路。
+Idea to Launch 是一套免費的技能，裝進你已經在用的 AI 助理就能用：Claude、Codex、Cursor、Gemini、GitHub Copilot，還有[另外 15 款工具](../install.md#every-supported-tool)。用你自己的話、你自己的語言說出點子就好。助理會先問你幾個關鍵問題，寫一頁計畫請你確認，接著動手做出來，像真正的顧客一樣檢查一遍，再幫你把它放上網路。
 
 **語言：** [English](../../README.md) · [简体中文](README.zh-CN.md) · **繁體中文** · [Español](README.es.md) · [हिन्दी](README.hi.md) · [العربية](README.ar.md) · [Português](README.pt-BR.md) · [Français](README.fr.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [Deutsch](README.de.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [한국어](README.ko.md) · [Türkçe](README.tr.md) · [Italiano](README.it.md) · [ไทย](README.th.md) · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Українська](README.uk.md)
 
@@ -28,14 +28,14 @@ Software Builder 是一套免費的技能，裝進你已經在用的 AI 助理�
 
 | 你的工具 | 怎麼安裝 |
 |---|---|
-| **任何工具，一行指令搞定**（需要 [Node.js](https://nodejs.org)） | `npx github:OWNER/REPO` 會找出你的 AI 工具，一次全部裝好 |
-| **Mac 或 Linux，沒有 Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`，接著 `/plugin install software-builder@software-builder` |
-| **Claude Desktop**（聊天）或 claude.ai | 從 [Releases](https://github.com/OWNER/REPO/releases)（發布頁面）下載 zip 壓縮檔，然後每個都在 **Settings → Capabilities → Skills → Upload skill**（設定 → 功能 → 技能 → 上傳技能）上傳一次（[詳細說明](../install.md#claude-desktop-and-claudeai)） |
-| **Codex**（App 或命令列版） | `codex plugin marketplace add OWNER/REPO`，接著 `codex plugin add software-builder@software-builder` |
+| **任何工具，一行指令搞定**（需要 [Node.js](https://nodejs.org)） | `npx github:OWNER/idea-to-launch` 會找出你的 AI 工具，一次全部裝好 |
+| **Mac 或 Linux，沒有 Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`，接著 `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop**（聊天）或 claude.ai | 從 [Releases](https://github.com/OWNER/idea-to-launch/releases)（發布頁面）下載 zip 壓縮檔，然後每個都在 **Settings → Capabilities → Skills → Upload skill**（設定 → 功能 → 技能 → 上傳技能）上傳一次（[詳細說明](../install.md#claude-desktop-and-claudeai)） |
+| **Codex**（App 或命令列版） | `codex plugin marketplace add OWNER/idea-to-launch`，接著 `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Kiro…** | 用上面那一行指令安裝，或參考[所有工具](../install.md) |
-| **ChatGPT 或其他聊天助理** | 把 [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 上傳到專案或自訂 GPT |
+| **ChatGPT 或其他聊天助理** | 把 [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) 上傳到專案或自訂 GPT |
 
 接著**重新啟動你的 AI 工具**（或開一個新對話），然後說：
 

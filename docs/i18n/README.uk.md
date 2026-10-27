@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **Перетворіть свою ідею на робочу програму — і вчитися програмувати не доведеться.**
 
-Software Builder — це безкоштовний набір навичок для ШІ-асистента, яким ви вже
+Idea to Launch — це безкоштовний набір навичок для ШІ-асистента, яким ви вже
 користуєтеся: Claude, Codex, Cursor, Gemini, GitHub Copilot та
 [ще 15 інструментів](../install.md#every-supported-tool). Опишіть ідею своїми
 словами й своєю мовою. Асистент поставить кілька слушних запитань, напише план
@@ -42,14 +42,14 @@ _Це переклад. Основний текст — [англійська в
 
 | Ваш інструмент | Як встановити |
 |---|---|
-| **Будь-який інструмент, одна команда** (потрібен [Node.js](https://nodejs.org)) | `npx github:OWNER/REPO` знаходить ваші ШІ-інструменти й встановлює навички в усі одразу |
-| **Mac або Linux без Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`, потім `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (чат) або claude.ai | Завантажте zip-архіви зі сторінки [Releases](https://github.com/OWNER/REPO/releases), потім додайте кожен через **Settings → Capabilities → Skills → Upload skill** («Налаштування → Можливості → Навички → Завантажити навичку»; [докладніше](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (застосунок або командний рядок) | `codex plugin marketplace add OWNER/REPO`, потім `codex plugin add software-builder@software-builder` |
+| **Будь-який інструмент, одна команда** (потрібен [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` знаходить ваші ШІ-інструменти й встановлює навички в усі одразу |
+| **Mac або Linux без Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, потім `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (чат) або claude.ai | Завантажте zip-архіви зі сторінки [Releases](https://github.com/OWNER/idea-to-launch/releases), потім додайте кожен через **Settings → Capabilities → Skills → Upload skill** («Налаштування → Можливості → Навички → Завантажити навичку»; [докладніше](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (застосунок або командний рядок) | `codex plugin marketplace add OWNER/idea-to-launch`, потім `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Встановлення однією командою (див. вище) або [інструкції для кожного інструмента](../install.md) |
-| **ChatGPT чи будь-який інший чат-асистент** | Завантажте [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) у проєкт або у власний GPT (custom GPT) |
+| **ChatGPT чи будь-який інший чат-асистент** | Завантажте [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) у проєкт або у власний GPT (custom GPT) |
 
 Потім **перезапустіть свій ШІ-інструмент** (або почніть новий чат) і напишіть:
 
@@ -92,7 +92,7 @@ Codex — асистент продовжить із того місця, де �
 - Сам код лишається англійською, щоб згодом його міг підхопити будь-який
   розробник.
 
-Software Builder перевірено на 20 мовах: English, 简体中文, 繁體中文, Español, हिन्दी,
+Idea to Launch перевірено на 20 мовах: English, 简体中文, 繁體中文, Español, हिन्दी,
 العربية, Português, Français, Русский, 日本語, Deutsch, Bahasa Indonesia,
 Tiếng Việt, 한국어, Türkçe, Italiano, ไทย, Polski, Nederlands і
 Українська. Інші мови зазвичай теж працюють.

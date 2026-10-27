@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **Kod yazmayı öğrenmeden fikrini çalışan bir yazılıma dönüştür.**
 
-Software Builder, zaten kullandığın yapay zekâ asistanı için ücretsiz bir
+Idea to Launch, zaten kullandığın yapay zekâ asistanı için ücretsiz bir
 beceri setidir: Claude, Codex, Cursor, Gemini, GitHub Copilot ve
 [15 araç daha](../install.md#every-supported-tool). Fikrini kendi
 kelimelerinle, kendi dilinde anlat. Asistanın sana birkaç yerinde soru sorar,
@@ -43,14 +43,14 @@ Kullandığın aracı seç. Her seçenek aynı becerileri kurar.
 
 | Aracın | Nasıl kurulur |
 |---|---|
-| **Her araç, tek komut** ([Node.js](https://nodejs.org) gerekir) | `npx github:OWNER/REPO` yapay zekâ araçlarını bulur ve becerileri hepsine birden kurar |
-| **Mac veya Linux, Node.js olmadan** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`, ardından `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (sohbet) veya claude.ai | [Releases](https://github.com/OWNER/REPO/releases) sayfasından zip dosyalarını indir, sonra her biri için **Settings → Capabilities → Skills → Upload skill** yolunu izle (Ayarlar → Yetenekler → Beceriler → Beceri yükle; [ayrıntılar](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (uygulama veya komut satırı) | `codex plugin marketplace add OWNER/REPO`, ardından `codex plugin add software-builder@software-builder` |
+| **Her araç, tek komut** ([Node.js](https://nodejs.org) gerekir) | `npx github:OWNER/idea-to-launch` yapay zekâ araçlarını bulur ve becerileri hepsine birden kurar |
+| **Mac veya Linux, Node.js olmadan** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, ardından `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (sohbet) veya claude.ai | [Releases](https://github.com/OWNER/idea-to-launch/releases) sayfasından zip dosyalarını indir, sonra her biri için **Settings → Capabilities → Skills → Upload skill** yolunu izle (Ayarlar → Yetenekler → Beceriler → Beceri yükle; [ayrıntılar](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (uygulama veya komut satırı) | `codex plugin marketplace add OWNER/idea-to-launch`, ardından `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Yukarıdaki tek komutluk kurulum ya da [tüm araçlar](../install.md) |
-| **ChatGPT veya başka bir sohbet asistanı** | [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) dosyasını bir projeye ya da kendi GPT'ne (custom GPT) yükle |
+| **ChatGPT veya başka bir sohbet asistanı** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) dosyasını bir projeye ya da kendi GPT'ne (custom GPT) yükle |
 
 Sonra **yapay zekâ aracını yeniden başlat** (ya da yeni bir sohbet aç) ve şunu
 yaz:

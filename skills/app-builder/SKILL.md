@@ -3,11 +3,11 @@ name: app-builder
 description: Start here to turn an idea into a working app, website or tool, for people who don't code. Guides idea, plan, look, build, check and go-live, and resumes saved projects.
 license: MIT
 metadata:
-  suite: software-builder
+  suite: idea-to-launch
   version: "1.0.0"
 ---
 
-# Software Builder: start here
+# Idea to Launch: start here
 
 You are helping someone who may never have built software turn their idea
 into something real that people can use. They bring the business knowledge,

@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **Biến ý tưởng của bạn thành phần mềm chạy được, mà không cần học lập trình.**
 
-Software Builder là bộ kỹ năng miễn phí cho trợ lý AI bạn đang dùng:
+Idea to Launch là bộ kỹ năng miễn phí cho trợ lý AI bạn đang dùng:
 Claude, Codex, Cursor, Gemini, GitHub Copilot và
 [15 công cụ khác](../install.md#every-supported-tool). Cứ kể ý tưởng bằng
 lời của bạn, bằng ngôn ngữ của chính bạn. Trợ lý sẽ hỏi bạn vài câu thật
@@ -41,14 +41,14 @@ Chọn công cụ bạn đang dùng. Cách nào cũng cài cùng một bộ kỹ
 
 | Công cụ của bạn | Cách cài |
 |---|---|
-| **Mọi công cụ, chỉ một lệnh** (cần [Node.js](https://nodejs.org)) | `npx github:OWNER/REPO` tự tìm các công cụ AI của bạn và cài vào tất cả |
-| **Mac hoặc Linux, không có Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`, rồi `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (trò chuyện) hoặc claude.ai | Tải các file zip ở trang [Releases](https://github.com/OWNER/REPO/releases), rồi với từng file, vào **Settings → Capabilities → Skills → Upload skill** (Cài đặt → Khả năng → Kỹ năng → Tải kỹ năng lên) ([chi tiết](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (ứng dụng hoặc CLI) | `codex plugin marketplace add OWNER/REPO`, rồi `codex plugin add software-builder@software-builder` |
+| **Mọi công cụ, chỉ một lệnh** (cần [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` tự tìm các công cụ AI của bạn và cài vào tất cả |
+| **Mac hoặc Linux, không có Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, rồi `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (trò chuyện) hoặc claude.ai | Tải các file zip ở trang [Releases](https://github.com/OWNER/idea-to-launch/releases), rồi với từng file, vào **Settings → Capabilities → Skills → Upload skill** (Cài đặt → Khả năng → Kỹ năng → Tải kỹ năng lên) ([chi tiết](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (ứng dụng hoặc CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, rồi `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Cách cài một lệnh ở trên, hoặc xem [mọi công cụ](../install.md) |
-| **ChatGPT hoặc trợ lý trò chuyện khác** | Tải [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) lên một dự án (project) hoặc một GPT tuỳ chỉnh |
+| **ChatGPT hoặc trợ lý trò chuyện khác** | Tải [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) lên một dự án (project) hoặc một GPT tuỳ chỉnh |
 
 Sau đó **khởi động lại công cụ AI** (hoặc mở một cuộc trò chuyện mới) và nói:
 

@@ -1,10 +1,10 @@
 <div dir="rtl">
 
-# Software Builder
+# Idea to Launch
 
 **من فكرتك إلى برنامج يعمل فعلًا، بلا حاجة إلى تعلّم البرمجة.**
 
-Software Builder مجموعة مجانية من المهارات لمساعد الذكاء الاصطناعي الموجود
+Idea to Launch مجموعة مجانية من المهارات لمساعد الذكاء الاصطناعي الموجود
 لديك أصلًا: Claude وCodex وCursor وGemini وGitHub Copilot
 و[15 أداة أخرى](../install.md#every-supported-tool). يكفي وصف فكرتك بكلماتك
 وبلغتك. يطرح عليك المساعد بعض الأسئلة المفيدة، ويكتب خطة من صفحة واحدة تنتظر
@@ -42,14 +42,14 @@ Software Builder مجموعة مجانية من المهارات لمساعد ا
 
 | أداتك | طريقة التثبيت |
 |---|---|
-| **أي أداة، بأمر واحد** (يتطلب [Node.js](https://nodejs.org)) | `npx github:OWNER/REPO` يعثر على أدوات الذكاء الاصطناعي لديك ويثبّت المهارات فيها كلها |
-| **Mac أو Linux، دون Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`، ثم `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (المحادثة) أو claude.ai | تنزيل ملفات zip من صفحة [Releases](https://github.com/OWNER/REPO/releases)، ثم فتح **Settings → Capabilities → Skills → Upload skill** (الإعدادات ← القدرات ← المهارات ← رفع مهارة) لكل ملف ([التفاصيل](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (التطبيق أو CLI) | `codex plugin marketplace add OWNER/REPO`، ثم `codex plugin add software-builder@software-builder` |
+| **أي أداة، بأمر واحد** (يتطلب [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` يعثر على أدوات الذكاء الاصطناعي لديك ويثبّت المهارات فيها كلها |
+| **Mac أو Linux، دون Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`، ثم `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (المحادثة) أو claude.ai | تنزيل ملفات zip من صفحة [Releases](https://github.com/OWNER/idea-to-launch/releases)، ثم فتح **Settings → Capabilities → Skills → Upload skill** (الإعدادات ← القدرات ← المهارات ← رفع مهارة) لكل ملف ([التفاصيل](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (التطبيق أو CLI) | `codex plugin marketplace add OWNER/idea-to-launch`، ثم `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | طريقة الأمر الواحد أعلاه، أو [دليل كل الأدوات](../install.md) |
-| **ChatGPT أو أي مساعد محادثة آخر** | رفع [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) إلى مشروع (Project) أو إلى GPT مخصّص |
+| **ChatGPT أو أي مساعد محادثة آخر** | رفع [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) إلى مشروع (Project) أو إلى GPT مخصّص |
 
 بعدها، كل ما عليك هو **إعادة تشغيل أداة الذكاء الاصطناعي** (أو بدء محادثة
 جديدة)، ثم كتابة:

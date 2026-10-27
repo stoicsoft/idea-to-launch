@@ -3,7 +3,7 @@ name: app-change
 description: Make a small visible change to an app (wording, colour, order, hide or show) quickly, or turn "this isn't what I wanted" feedback into a precise fix list. Bigger changes go through a plan.
 license: MIT
 metadata:
-  suite: software-builder
+  suite: idea-to-launch
   version: "1.0.0"
 ---
 

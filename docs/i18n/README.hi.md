@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **अपने आइडिया को चलने वाले सॉफ़्टवेयर में बदलें, कोडिंग सीखे बिना।**
 
-Software Builder मुफ़्त स्किल्स का एक सेट है, उस AI असिस्टेंट के लिए जिसे आप
+Idea to Launch मुफ़्त स्किल्स का एक सेट है, उस AI असिस्टेंट के लिए जिसे आप
 पहले से इस्तेमाल करते हैं: Claude, Codex, Cursor, Gemini, GitHub Copilot और
 [15 और टूल](../install.md#every-supported-tool)। अपना आइडिया अपने शब्दों में,
 अपनी भाषा में बताएँ। आपका असिस्टेंट आपसे कुछ काम के सवाल पूछता है, एक पेज का
@@ -42,14 +42,14 @@ Software Builder मुफ़्त स्किल्स का एक से�
 
 | आपका टूल | इंस्टॉल कैसे करें |
 |---|---|
-| **कोई भी टूल, एक कमांड** ([Node.js](https://nodejs.org) चाहिए) | `npx github:OWNER/REPO` आपके AI टूल ढूँढकर सब में इंस्टॉल कर देता है |
-| **Mac या Linux, बिना Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`, फिर `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (चैट) या claude.ai | [Releases](https://github.com/OWNER/REPO/releases) से zip फ़ाइलें डाउनलोड करें, फिर हर फ़ाइल के लिए **Settings → Capabilities → Skills → Upload skill** (सेटिंग्स → क्षमताएँ → स्किल्स → स्किल अपलोड करें) खोलें ([पूरी जानकारी](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (ऐप या CLI) | `codex plugin marketplace add OWNER/REPO`, फिर `codex plugin add software-builder@software-builder` |
+| **कोई भी टूल, एक कमांड** ([Node.js](https://nodejs.org) चाहिए) | `npx github:OWNER/idea-to-launch` आपके AI टूल ढूँढकर सब में इंस्टॉल कर देता है |
+| **Mac या Linux, बिना Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, फिर `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (चैट) या claude.ai | [Releases](https://github.com/OWNER/idea-to-launch/releases) से zip फ़ाइलें डाउनलोड करें, फिर हर फ़ाइल के लिए **Settings → Capabilities → Skills → Upload skill** (सेटिंग्स → क्षमताएँ → स्किल्स → स्किल अपलोड करें) खोलें ([पूरी जानकारी](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (ऐप या CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, फिर `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | ऊपर वाला एक-कमांड तरीका, या [हर टूल की गाइड](../install.md) देखें |
-| **ChatGPT या कोई और चैट असिस्टेंट** | [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) को किसी प्रोजेक्ट या कस्टम GPT में अपलोड करें |
+| **ChatGPT या कोई और चैट असिस्टेंट** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) को किसी प्रोजेक्ट या कस्टम GPT में अपलोड करें |
 
 फिर **अपना AI टूल रीस्टार्ट करें** (या नई चैट शुरू करें) और लिखें:
 

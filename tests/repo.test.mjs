@@ -52,10 +52,10 @@ test('package builds one upload per skill with the skill folder at the top', () 
     assert.ok([...entries.keys()].every((n) => n.startsWith(`${skill}/`)))
     assert.equal(entries.get(`${skill}/SKILL.md`).toString('utf8'), readFileSync(join(ROOT, 'skills', skill, 'SKILL.md'), 'utf8'))
   }
-  const all = readZip(readFileSync(join(ROOT, 'dist/software-builder-skills.zip')))
+  const all = readZip(readFileSync(join(ROOT, 'dist/idea-to-launch-skills.zip')))
   for (const skill of SKILLS) assert.ok(all.has(`${skill}/SKILL.md`))
-  const prompt = readFileSync(join(ROOT, 'dist/software-builder-prompt.md'), 'utf8')
-  for (const heading of ['# Software Builder: start here', '# The whole journey, in short', '# How to talk to the person', '# Project memory', '# Languages']) {
+  const prompt = readFileSync(join(ROOT, 'dist/idea-to-launch-prompt.md'), 'utf8')
+  for (const heading of ['# Idea to Launch: start here', '# The whole journey, in short', '# How to talk to the person', '# Project memory', '# Languages']) {
     assert.ok(prompt.includes(heading), `prompt lacks "${heading}"`)
   }
   assert.ok(!/\]\((?!https?:)[^)]+\.md\)/.test(prompt), 'single-file prompt still links to files it does not include')
@@ -107,7 +107,7 @@ test('every manifest names the same plugin and the skills folder exists for each
   const codex = JSON.parse(readFileSync(join(ROOT, '.codex-plugin/plugin.json'), 'utf8'))
   const gemini = JSON.parse(readFileSync(join(ROOT, 'gemini-extension.json'), 'utf8'))
   const market = JSON.parse(readFileSync(join(ROOT, '.agents/plugins/marketplace.json'), 'utf8'))
-  assert.equal(claude.name, 'software-builder')
+  assert.equal(claude.name, 'idea-to-launch')
   assert.equal(codex.name, claude.name)
   assert.equal(gemini.name, claude.name)
   assert.equal(market.plugins[0].name, claude.name)

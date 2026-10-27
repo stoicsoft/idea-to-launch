@@ -1,10 +1,10 @@
 {
-  "name": "software-builder-skills",
+  "name": "idea-to-launch",
   "version": "1.0.0",
   "description": "Agent skills that help people who don't code turn an idea into working software with Claude, Codex, Cursor, Gemini, Copilot and other AI tools, in their own language.",
   "type": "module",
   "bin": {
-    "software-builder": "scripts/cli.mjs"
+    "idea-to-launch": "scripts/cli.mjs"
   },
   "files": [
     "skills",
@@ -27,9 +27,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/REPO.git"
+    "url": "git+https://github.com/OWNER/idea-to-launch.git"
   },
-  "homepage": "https://github.com/OWNER/REPO#readme",
+  "homepage": "https://github.com/OWNER/idea-to-launch#readme",
   "author": "StoicSoft",
   "license": "MIT",
   "keywords": [

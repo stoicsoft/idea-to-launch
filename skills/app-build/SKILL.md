@@ -3,7 +3,7 @@ name: app-build
 description: Build an app, or add a feature, from an approved plan for a non-technical owner, with real content, their customers' language, phone-first screens, safe data and a tested main journey.
 license: MIT
 metadata:
-  suite: software-builder
+  suite: idea-to-launch
   version: "1.0.0"
 ---
 

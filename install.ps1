@@ -1,6 +1,6 @@
-# Software Builder installer for Windows (PowerShell 5.1 or newer).
+# Idea to Launch installer for Windows (PowerShell 5.1 or newer).
 #
-#   irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 | iex
 #
 # To choose tools, download the script and run it with options:
 #   .\install.ps1 -Agent claude,cursor     .\install.ps1 -All     .\install.ps1 -Uninstall
@@ -15,9 +15,9 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 
-$Repo = if ($env:SOFTWARE_BUILDER_REPO) { $env:SOFTWARE_BUILDER_REPO } else { 'OWNER/REPO' }
+$Repo = if ($env:IDEA_TO_LAUNCH_REPO) { $env:IDEA_TO_LAUNCH_REPO } else { 'OWNER/idea-to-launch' }
 $Skills = @('app-builder', 'app-idea', 'app-plan', 'app-design', 'app-build', 'app-change', 'app-fix', 'app-review', 'app-launch')
-$Suite = 'software-builder'
+$Suite = 'idea-to-launch'
 $Agent = @($Agent | ForEach-Object { $_ -split ',' } | Where-Object { $_ })
 
 $Agents = @(
@@ -61,10 +61,10 @@ $Src = $null
 if ($PSScriptRoot -and (Test-Path (Join-Path $PSScriptRoot 'skills/app-builder/SKILL.md'))) {
   $Src = $PSScriptRoot
 } else {
-  if ($Repo -like 'OWNER/*') { throw 'This copy of the installer has no repository set. Run it from a checkout, or set $env:SOFTWARE_BUILDER_REPO = "owner/repo".' }
-  $Tmp = Join-Path ([IO.Path]::GetTempPath()) ("software-builder-" + [Guid]::NewGuid())
+  if ($Repo -like 'OWNER/*') { throw 'This copy of the installer has no repository set. Run it from a checkout, or set $env:IDEA_TO_LAUNCH_REPO = "owner/repo".' }
+  $Tmp = Join-Path ([IO.Path]::GetTempPath()) ("idea-to-launch-" + [Guid]::NewGuid())
   New-Item -ItemType Directory -Path $Tmp | Out-Null
-  Write-Host "Downloading Software Builder ($Repo@$Ref)..."
+  Write-Host "Downloading Idea to Launch ($Repo@$Ref)..."
   $Zip = Join-Path $Tmp 'src.zip'
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   Invoke-WebRequest -UseBasicParsing -Uri "https://codeload.github.com/$Repo/zip/$Ref" -OutFile $Zip

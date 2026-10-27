@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **プログラミングを覚えなくても、アイデアを実際に使えるソフトウェアに。**
 
-Software Builder は、いつも使っている AI アシスタントに追加できる無料のスキル集です。Claude、Codex、Cursor、Gemini、GitHub Copilot のほか、[さらに15種類のツール](../install.md#every-supported-tool)で使えます。アイデアは、ふだんの言葉で、ふだん使っている言語のまま伝えてください。アシスタントがいくつか大事な質問をして、1ページの計画を書いて確認をお願いし、実際に作り、本物のお客さんになったつもりでチェックして、インターネットに公開するところまで手伝います。
+Idea to Launch は、いつも使っている AI アシスタントに追加できる無料のスキル集です。Claude、Codex、Cursor、Gemini、GitHub Copilot のほか、[さらに15種類のツール](../install.md#every-supported-tool)で使えます。アイデアは、ふだんの言葉で、ふだん使っている言語のまま伝えてください。アシスタントがいくつか大事な質問をして、1ページの計画を書いて確認をお願いし、実際に作り、本物のお客さんになったつもりでチェックして、インターネットに公開するところまで手伝います。
 
 **言語：** [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [Español](README.es.md) · [हिन्दी](README.hi.md) · [العربية](README.ar.md) · [Português](README.pt-BR.md) · [Français](README.fr.md) · [Русский](README.ru.md) · **日本語** · [Deutsch](README.de.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [한국어](README.ko.md) · [Türkçe](README.tr.md) · [Italiano](README.it.md) · [ไทย](README.th.md) · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Українська](README.uk.md)
 
@@ -28,14 +28,14 @@ Software Builder は、いつも使っている AI アシスタントに追加�
 
 | お使いのツール | インストール方法 |
 |---|---|
-| **どのツールでも、コマンド1つで**（[Node.js](https://nodejs.org) が必要） | `npx github:OWNER/REPO` が AI ツールを見つけて、そのすべてにインストールします |
-| **Mac または Linux（Node.js なし）** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO` のあと、`/plugin install software-builder@software-builder` |
-| **Claude Desktop**（チャット）または claude.ai | [Releases](https://github.com/OWNER/REPO/releases)（公開版のページ）から zip ファイルをダウンロードし、1つずつ **Settings → Capabilities → Skills → Upload skill**（設定 → 機能 → スキル → スキルをアップロード）からアップロードします（[詳しくはこちら](../install.md#claude-desktop-and-claudeai)） |
-| **Codex**（アプリ版またはコマンドライン版） | `codex plugin marketplace add OWNER/REPO` のあと、`codex plugin add software-builder@software-builder` |
+| **どのツールでも、コマンド1つで**（[Node.js](https://nodejs.org) が必要） | `npx github:OWNER/idea-to-launch` が AI ツールを見つけて、そのすべてにインストールします |
+| **Mac または Linux（Node.js なし）** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows**（PowerShell） | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch` のあと、`/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop**（チャット）または claude.ai | [Releases](https://github.com/OWNER/idea-to-launch/releases)（公開版のページ）から zip ファイルをダウンロードし、1つずつ **Settings → Capabilities → Skills → Upload skill**（設定 → 機能 → スキル → スキルをアップロード）からアップロードします（[詳しくはこちら](../install.md#claude-desktop-and-claudeai)） |
+| **Codex**（アプリ版またはコマンドライン版） | `codex plugin marketplace add OWNER/idea-to-launch` のあと、`codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor、Gemini CLI、Copilot、Windsurf、OpenCode、Kiro…** | 上の「コマンド1つ」の方法を使うか、[すべてのツール](../install.md)を見てください |
-| **ChatGPT やその他のチャットアシスタント** | [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) をプロジェクトまたはカスタム GPT にアップロードします |
+| **ChatGPT やその他のチャットアシスタント** | [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) をプロジェクトまたはカスタム GPT にアップロードします |
 
 そのあと **AI ツールを再起動**（または新しいチャットを開始）して、こう話しかけてください。
 

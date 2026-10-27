@@ -1,11 +1,11 @@
 {
-  "name": "software-builder",
+  "name": "idea-to-launch",
   "interface": {
-    "displayName": "Software Builder"
+    "displayName": "Idea to Launch"
   },
   "plugins": [
     {
-      "name": "software-builder",
+      "name": "idea-to-launch",
       "source": {
         "source": "local",
         "path": "./"

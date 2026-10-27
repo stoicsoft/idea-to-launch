@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **Wujudkan idemu jadi software yang benar-benar jalan, tanpa perlu belajar coding.**
 
-Software Builder adalah kumpulan skill gratis untuk asisten AI yang sudah kamu
+Idea to Launch adalah kumpulan skill gratis untuk asisten AI yang sudah kamu
 pakai: Claude, Codex, Cursor, Gemini, GitHub Copilot, dan
 [15 aplikasi lainnya](../install.md#every-supported-tool). Ceritakan idemu
 dengan kata-katamu sendiri, dalam bahasamu sendiri. Asistenmu akan mengajukan
@@ -43,14 +43,14 @@ Pilih aplikasi AI yang kamu pakai. Semua cara memasang skill yang sama.
 
 | Aplikasi AI-mu | Cara memasang |
 |---|---|
-| **Aplikasi apa pun, satu perintah** (butuh [Node.js](https://nodejs.org)) | `npx github:OWNER/REPO` mencari aplikasi AI-mu dan memasang ke semuanya |
-| **Mac atau Linux, tanpa Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`, lalu `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (chat) atau claude.ai | Unduh file zip dari [Releases](https://github.com/OWNER/REPO/releases), lalu untuk setiap file buka **Settings → Capabilities → Skills → Upload skill** (Pengaturan → Kemampuan → Skill → Unggah skill) ([detail](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (aplikasi atau CLI) | `codex plugin marketplace add OWNER/REPO`, lalu `codex plugin add software-builder@software-builder` |
+| **Aplikasi apa pun, satu perintah** (butuh [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` mencari aplikasi AI-mu dan memasang ke semuanya |
+| **Mac atau Linux, tanpa Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, lalu `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (chat) atau claude.ai | Unduh file zip dari [Releases](https://github.com/OWNER/idea-to-launch/releases), lalu untuk setiap file buka **Settings → Capabilities → Skills → Upload skill** (Pengaturan → Kemampuan → Skill → Unggah skill) ([detail](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (aplikasi atau CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, lalu `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | Cara satu perintah di atas, atau lihat [semua aplikasi](../install.md) |
-| **ChatGPT atau asisten chat lain** | Unggah [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ke sebuah proyek atau GPT kustom |
+| **ChatGPT atau asisten chat lain** | Unggah [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ke sebuah proyek atau GPT kustom |
 
 Lalu **buka ulang aplikasi AI-mu** (atau mulai chat baru) dan tulis:
 

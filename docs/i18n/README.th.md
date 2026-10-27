@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **เปลี่ยนไอเดียของคุณให้เป็นซอฟต์แวร์ที่ใช้งานได้จริง โดยไม่ต้องเรียนเขียนโค้ด**
 
-Software Builder คือชุดสกิลฟรีสำหรับผู้ช่วย AI ที่คุณใช้อยู่แล้ว ทั้ง Claude, Codex, Cursor, Gemini, GitHub Copilot และ[เครื่องมืออื่นอีก 15 ตัว](../install.md#every-supported-tool) แค่เล่าไอเดียด้วยคำพูดของคุณเอง เป็นภาษาของคุณเอง ผู้ช่วยจะถามคำถามสำคัญสักไม่กี่ข้อ เขียนแผนหนึ่งหน้าให้คุณอนุมัติ ลงมือสร้าง ตรวจดูแบบที่ลูกค้าจริงใช้งาน และช่วยคุณนำขึ้นอินเทอร์เน็ต
+Idea to Launch คือชุดสกิลฟรีสำหรับผู้ช่วย AI ที่คุณใช้อยู่แล้ว ทั้ง Claude, Codex, Cursor, Gemini, GitHub Copilot และ[เครื่องมืออื่นอีก 15 ตัว](../install.md#every-supported-tool) แค่เล่าไอเดียด้วยคำพูดของคุณเอง เป็นภาษาของคุณเอง ผู้ช่วยจะถามคำถามสำคัญสักไม่กี่ข้อ เขียนแผนหนึ่งหน้าให้คุณอนุมัติ ลงมือสร้าง ตรวจดูแบบที่ลูกค้าจริงใช้งาน และช่วยคุณนำขึ้นอินเทอร์เน็ต
 
 **ภาษา:** [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [Español](README.es.md) · [हिन्दी](README.hi.md) · [العربية](README.ar.md) · [Português](README.pt-BR.md) · [Français](README.fr.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [Deutsch](README.de.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [한국어](README.ko.md) · [Türkçe](README.tr.md) · [Italiano](README.it.md) · **ไทย** · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Українська](README.uk.md)
 
@@ -28,14 +28,14 @@ Software Builder คือชุดสกิลฟรีสำหรับผู
 
 | เครื่องมือของคุณ | วิธีติดตั้ง |
 |---|---|
-| **เครื่องมือไหนก็ได้ ด้วยคำสั่งเดียว** (ต้องมี [Node.js](https://nodejs.org)) | `npx github:OWNER/REPO` จะค้นหาเครื่องมือ AI ของคุณ แล้วติดตั้งให้ครบทุกตัว |
-| **Mac หรือ Linux ที่ไม่มี Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO` จากนั้น `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (แชต) หรือ claude.ai | ดาวน์โหลดไฟล์ zip จาก [Releases](https://github.com/OWNER/REPO/releases) (หน้ารวมเวอร์ชันที่เผยแพร่) แล้วอัปโหลดทีละไฟล์ที่ **Settings → Capabilities → Skills → Upload skill** (การตั้งค่า → ความสามารถ → สกิล → อัปโหลดสกิล) ([ดูรายละเอียด](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (แอปหรือแบบพิมพ์คำสั่ง) | `codex plugin marketplace add OWNER/REPO` จากนั้น `codex plugin add software-builder@software-builder` |
+| **เครื่องมือไหนก็ได้ ด้วยคำสั่งเดียว** (ต้องมี [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` จะค้นหาเครื่องมือ AI ของคุณ แล้วติดตั้งให้ครบทุกตัว |
+| **Mac หรือ Linux ที่ไม่มี Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch` จากนั้น `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (แชต) หรือ claude.ai | ดาวน์โหลดไฟล์ zip จาก [Releases](https://github.com/OWNER/idea-to-launch/releases) (หน้ารวมเวอร์ชันที่เผยแพร่) แล้วอัปโหลดทีละไฟล์ที่ **Settings → Capabilities → Skills → Upload skill** (การตั้งค่า → ความสามารถ → สกิล → อัปโหลดสกิล) ([ดูรายละเอียด](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (แอปหรือแบบพิมพ์คำสั่ง) | `codex plugin marketplace add OWNER/idea-to-launch` จากนั้น `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | ใช้วิธีติดตั้งด้วยคำสั่งเดียวด้านบน หรือดู[ทุกเครื่องมือ](../install.md) |
-| **ChatGPT หรือผู้ช่วยแชตอื่น ๆ** | อัปโหลด [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ไปไว้ในโปรเจกต์หรือ GPT ที่สร้างเอง |
+| **ChatGPT หรือผู้ช่วยแชตอื่น ๆ** | อัปโหลด [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) ไปไว้ในโปรเจกต์หรือ GPT ที่สร้างเอง |
 
 จากนั้น**รีสตาร์ตเครื่องมือ AI ของคุณ** (หรือเริ่มแชตใหม่) แล้วพิมพ์ว่า:
 

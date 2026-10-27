@@ -24,4 +24,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file CHANGELOG.md \
-            dist/claude-desktop/*.zip dist/software-builder-skills.zip dist/software-builder-prompt.md
+            dist/claude-desktop/*.zip dist/idea-to-launch-skills.zip dist/idea-to-launch-prompt.md

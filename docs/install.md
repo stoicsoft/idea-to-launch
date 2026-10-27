@@ -1,6 +1,6 @@
-# Install Software Builder
+# Install Idea to Launch
 
-Software Builder is a folder of nine skills: plain-text instructions your AI
+Idea to Launch is a folder of nine skills: plain-text instructions your AI
 assistant reads when they're useful. Installing means copying that folder
 to where your AI tool looks for skills. Nothing runs in the background,
 nothing is sent anywhere, and you can remove it at any time.
@@ -10,7 +10,7 @@ terminal. It finds every AI tool on your computer and installs into all of
 them:
 
 ```sh
-npx github:OWNER/REPO
+npx github:OWNER/idea-to-launch
 ```
 
 Not sure what a terminal is? On a Mac, open **Terminal** (press ⌘ Space
@@ -28,12 +28,12 @@ Pick one:
 
 - **As a plugin** (easy updates), inside Claude Code:
   ```
-  /plugin marketplace add OWNER/REPO
-  /plugin install software-builder@software-builder
+  /plugin marketplace add OWNER/idea-to-launch
+  /plugin install idea-to-launch@idea-to-launch
   ```
-  The steps then appear as `/software-builder:app-idea` and so on. You can
+  The steps then appear as `/idea-to-launch:app-idea` and so on. You can
   also just describe what you want.
-- **As plain skills:** `npx github:OWNER/REPO --agent claude`, or the
+- **As plain skills:** `npx github:OWNER/idea-to-launch --agent claude`, or the
   [Mac/Linux](#mac-and-linux-without-nodejs) or [Windows](#windows)
   installer. The steps appear as `/app-idea` and so on.
 
@@ -45,7 +45,7 @@ Claude Desktop has two places where skills live:
   [Claude Code](#claude-code) above.
 - **Chat** (and claude.ai in the browser) uses uploaded skills:
   1. Download the zips from the project's
-     [Releases](https://github.com/OWNER/REPO/releases) page (the
+     [Releases](https://github.com/OWNER/idea-to-launch/releases) page (the
      `claude-desktop` files), or build them yourself with `npm run package`
      (they appear in `dist/claude-desktop/`).
   2. In Claude, open **Settings → Capabilities**, and make sure **Code
@@ -69,43 +69,43 @@ install once:
 
 - **As a plugin:**
   ```sh
-  codex plugin marketplace add OWNER/REPO
-  codex plugin add software-builder@software-builder
+  codex plugin marketplace add OWNER/idea-to-launch
+  codex plugin add idea-to-launch@idea-to-launch
   ```
-- **As plain skills:** `npx github:OWNER/REPO --agent codex` (installs into
+- **As plain skills:** `npx github:OWNER/idea-to-launch --agent codex` (installs into
   `~/.codex/skills`).
 
 Restart the Codex app, or start a new session.
 
 ## Cursor
 
-`npx github:OWNER/REPO --agent cursor`, or any installer below. Cursor also
+`npx github:OWNER/idea-to-launch --agent cursor`, or any installer below. Cursor also
 reads the Claude and Codex skill folders, so if you already installed for
 either of those, Cursor uses that copy and won't show the skills twice.
 In the Agent chat, type `/` to see the steps, or just describe your idea.
 
 ## Gemini CLI
 
-- **As an extension:** `gemini extensions install https://github.com/OWNER/REPO`
+- **As an extension:** `gemini extensions install https://github.com/OWNER/idea-to-launch`
   (it asks you to trust the folder first).
-- **As plain skills:** `npx github:OWNER/REPO --agent gemini`.
+- **As plain skills:** `npx github:OWNER/idea-to-launch --agent gemini`.
 
 Check with `gemini skills list`.
 
 ## GitHub Copilot, Windsurf, OpenCode, Kiro and others
 
-`npx github:OWNER/REPO --agent <id>`, using the id from the
+`npx github:OWNER/idea-to-launch --agent <id>`, using the id from the
 [table below](#every-supported-tool), for example
-`npx github:OWNER/REPO --agent copilot,windsurf`. Without `--agent`, it
+`npx github:OWNER/idea-to-launch --agent copilot,windsurf`. Without `--agent`, it
 installs into every tool it finds.
 
 You can also use the community `skills` installer, which knows even more
-tools: `npx skills add OWNER/REPO`.
+tools: `npx skills add OWNER/idea-to-launch`.
 
 ## Mac and Linux without Node.js
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh | bash
 ```
 
 To pick tools: `… | bash -s -- --agent claude,cursor`. To remove:
@@ -116,7 +116,7 @@ To pick tools: `… | bash -s -- --agent claude,cursor`. To remove:
 In PowerShell:
 
 ```powershell
-irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 | iex
 ```
 
 To pick tools or remove, download `install.ps1` and run
@@ -127,12 +127,12 @@ To pick tools or remove, download `install.ps1` and run
 Assistants without skills support can still use the whole method from one
 file:
 
-1. Download `software-builder-prompt.md` from
-   [Releases](https://github.com/OWNER/REPO/releases) (or run
+1. Download `idea-to-launch-prompt.md` from
+   [Releases](https://github.com/OWNER/idea-to-launch/releases) (or run
    `npm run package` and take it from `dist/`).
 2. **ChatGPT:** create a **Project** (or a custom GPT) and add the file
    under **Files** / **Knowledge**. In the instructions, write: "Follow
-   software-builder-prompt.md for everything in this project."
+   idea-to-launch-prompt.md for everything in this project."
 3. **Other tools that read an `AGENTS.md` file** (for example Aider, or
    older tools without skills): save the file in your project as `AGENTS.md`.
 
@@ -142,7 +142,7 @@ To put the skills inside a project, so everyone who opens it gets them,
 run this from the project folder:
 
 ```sh
-npx github:OWNER/REPO install --project
+npx github:OWNER/idea-to-launch install --project
 ```
 
 This writes `.claude/skills/` (Claude Code) and `.agents/skills/` (Codex,
@@ -154,9 +154,9 @@ project.
 | | Command |
 |---|---|
 | Update | Run the same install command again. It replaces the old copy. |
-| See where it's installed | `npx github:OWNER/REPO list` |
-| Remove | `npx github:OWNER/REPO uninstall` (only removes folders this project installed) |
-| Plugin installs | Claude Code: `/plugin uninstall software-builder@software-builder`; Codex: `codex plugin remove software-builder@software-builder` |
+| See where it's installed | `npx github:OWNER/idea-to-launch list` |
+| Remove | `npx github:OWNER/idea-to-launch uninstall` (only removes folders this project installed) |
+| Plugin installs | Claude Code: `/plugin uninstall idea-to-launch@idea-to-launch`; Codex: `codex plugin remove idea-to-launch@idea-to-launch` |
 
 Removing the skills never touches your projects or their `product/` notes.
 
@@ -195,7 +195,7 @@ project; "inside a project" applies only to that project.
 
 Missing your tool? If it supports Agent Skills (a folder of `SKILL.md`
 files), copy the nine folders from `skills/` into its skills folder, and
-please [open an issue](https://github.com/OWNER/REPO/issues) so we can add
+please [open an issue](https://github.com/OWNER/idea-to-launch/issues) so we can add
 it.
 
 ## Something went wrong?

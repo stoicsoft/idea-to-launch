@@ -1,8 +1,8 @@
-# Software Builder
+# Idea to Launch
 
 **Trasforma la tua idea in un software che funziona, senza imparare a programmare.**
 
-Software Builder è una raccolta gratuita di abilità (skill) per l'assistente
+Idea to Launch è una raccolta gratuita di abilità (skill) per l'assistente
 IA che usi già: Claude, Codex, Cursor, Gemini, GitHub Copilot e
 [altri 15 strumenti](../install.md#every-supported-tool). Racconta la tua
 idea con parole tue, nella tua lingua. Il tuo assistente ti fa qualche
@@ -44,21 +44,21 @@ Scegli lo strumento che usi. Ogni opzione installa le stesse abilità.
 
 | Il tuo strumento | Come installare |
 |---|---|
-| **Qualsiasi strumento, un solo comando** (serve [Node.js](https://nodejs.org)) | `npx github:OWNER/REPO` trova i tuoi strumenti di IA e si installa in tutti |
-| **Mac o Linux, senza Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/install.sh \| bash` |
-| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/REPO/main/install.ps1 \| iex` |
-| **Claude Code** | `/plugin marketplace add OWNER/REPO`, poi `/plugin install software-builder@software-builder` |
-| **Claude Desktop** (chat) o claude.ai | Scarica i file zip da [Releases](https://github.com/OWNER/REPO/releases), poi per ognuno vai su **Settings → Capabilities → Skills → Upload skill** (Impostazioni → Funzionalità → Skill → Carica skill) ([dettagli](../install.md#claude-desktop-and-claudeai)) |
-| **Codex** (app o CLI) | `codex plugin marketplace add OWNER/REPO`, poi `codex plugin add software-builder@software-builder` |
+| **Qualsiasi strumento, un solo comando** (serve [Node.js](https://nodejs.org)) | `npx github:OWNER/idea-to-launch` trova i tuoi strumenti di IA e si installa in tutti |
+| **Mac o Linux, senza Node.js** | `curl -fsSL https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.sh \| bash` |
+| **Windows** (PowerShell) | `irm https://raw.githubusercontent.com/OWNER/idea-to-launch/main/install.ps1 \| iex` |
+| **Claude Code** | `/plugin marketplace add OWNER/idea-to-launch`, poi `/plugin install idea-to-launch@idea-to-launch` |
+| **Claude Desktop** (chat) o claude.ai | Scarica i file zip da [Releases](https://github.com/OWNER/idea-to-launch/releases), poi per ognuno vai su **Settings → Capabilities → Skills → Upload skill** (Impostazioni → Funzionalità → Skill → Carica skill) ([dettagli](../install.md#claude-desktop-and-claudeai)) |
+| **Codex** (app o CLI) | `codex plugin marketplace add OWNER/idea-to-launch`, poi `codex plugin add idea-to-launch@idea-to-launch` |
 | **Cursor, Gemini CLI, Copilot, Windsurf, OpenCode, Kiro…** | L'installazione con un solo comando qui sopra, oppure vedi [tutti gli strumenti](../install.md) |
-| **ChatGPT o qualsiasi altro assistente via chat** | Carica [`software-builder-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) in un progetto o in un GPT personalizzato |
+| **ChatGPT o qualsiasi altro assistente via chat** | Carica [`idea-to-launch-prompt.md`](../install.md#chatgpt-and-other-chat-assistants) in un progetto o in un GPT personalizzato |
 
 Poi **riavvia il tuo strumento di IA** (o apri una nuova chat) e scrivi:
 
 > Voglio creare un'app per la mia attività. Mi aiuti?
 
 La guida completa, con tutti gli strumenti e come aggiornare o rimuovere
-Software Builder, è in [docs/install.md](../install.md).
+Idea to Launch, è in [docs/install.md](../install.md).
 
 ## I passaggi
 

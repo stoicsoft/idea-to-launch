@@ -1,6 +1,6 @@
 # How it works
 
-Software Builder is the working method of 1FounderTool, a desktop app for
+Idea to Launch is the working method of 1FounderTool, a desktop app for
 founders, rewritten as open skills that any AI assistant can follow. The
 desktop app had its own screens, scheduler and checks. Here, your AI tool
 provides the conversation, the editing and the running; the skills provide

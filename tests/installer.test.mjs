@@ -113,7 +113,7 @@ test('honours CLAUDE_CONFIG_DIR', () => {
 
 test('install.sh plain-shell fallback copies, shares for Cursor and uninstalls', { skip: process.platform === 'win32' }, () => {
   const home = fakeHome('.claude', '.cursor')
-  const env = { ...process.env, HOME: home, SOFTWARE_BUILDER_NO_NODE: '1' }
+  const env = { ...process.env, HOME: home, IDEA_TO_LAUNCH_NO_NODE: '1' }
   delete env.CLAUDE_CONFIG_DIR
   const r = spawnSync('bash', [join(ROOT, 'install.sh')], { env, encoding: 'utf8' })
   assert.equal(r.status, 0, r.stdout + r.stderr)

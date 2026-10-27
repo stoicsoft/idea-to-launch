@@ -3,7 +3,7 @@ name: app-idea
 description: Interview someone about a new app idea in plain words (who it's for, what they do today, the smallest useful version) and save a one-page brief. Use before planning or building.
 license: MIT
 metadata:
-  suite: software-builder
+  suite: idea-to-launch
   version: "1.0.0"
 ---
 

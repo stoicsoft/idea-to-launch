@@ -63,7 +63,7 @@ language, the app is built multi-language from the start (see app-build's
 
 ## Tone in the languages we test
 
-Any language works. These twenty are the ones Software Builder is tested
+Any language works. These twenty are the ones Idea to Launch is tested
 in, with the form of address that reads naturally in a friendly product.
 Use it for both the talk language and the app language, unless the person
 or their brand clearly uses another.

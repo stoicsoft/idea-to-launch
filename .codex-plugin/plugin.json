@@ -1,12 +1,12 @@
 {
-  "name": "software-builder",
+  "name": "idea-to-launch",
   "version": "1.0.0",
   "description": "Turn an idea into working software without knowing how to code: a plain-language interview, a plan you approve, a chosen look, a safe build, a customer-eye check and a guided launch, in your language.",
   "author": {
     "name": "StoicSoft"
   },
-  "homepage": "https://github.com/OWNER/REPO",
-  "repository": "https://github.com/OWNER/REPO",
+  "homepage": "https://github.com/OWNER/idea-to-launch",
+  "repository": "https://github.com/OWNER/idea-to-launch",
   "license": "MIT",
   "keywords": [
     "no-code",
@@ -20,7 +20,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Software Builder",
+    "displayName": "Idea to Launch",
     "shortDescription": "Build real apps without coding",
     "longDescription": "Shape your idea in plain words, approve a one-page plan, pick a look, then build, check like a real customer and go live, in your own language. Your project's memory is saved in a product/ folder so you can continue any time, in any AI tool.",
     "developerName": "StoicSoft",
@@ -30,7 +30,7 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://github.com/OWNER/REPO",
+    "websiteURL": "https://github.com/OWNER/idea-to-launch",
     "defaultPrompt": [
       "I have an idea for an app. Can you help me build it?",
       "Is my app ready for real customers?",

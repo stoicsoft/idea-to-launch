@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// Software Builder installer. No dependencies; Node 18 or newer.
+// Idea to Launch installer. No dependencies; Node 18 or newer.
 //
-//   npx github:OWNER/REPO                 install into every AI tool found
+//   npx github:OWNER/idea-to-launch                 install into every AI tool found
 //   node scripts/cli.mjs install [options]
 //   node scripts/cli.mjs uninstall [options]
 //   node scripts/cli.mjs list
@@ -16,14 +16,14 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const SKILLS_DIR = join(ROOT, 'skills')
 const VERSION = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8')).version
 
-const HELP = `Software Builder ${VERSION}: skills that help anyone build software with their AI tool
+const HELP = `Idea to Launch ${VERSION}: skills that help anyone build software with their AI tool
 
 Usage
-  software-builder [install] [options]   Copy the skills into your AI tools
-  software-builder uninstall [options]   Remove them again (only folders this project installed)
-  software-builder list                  Show where they are installed
-  software-builder agents                Show every supported tool and its folder
-  software-builder package               Build dist/ (Claude Desktop zips, single-file prompt)
+  idea-to-launch [install] [options]   Copy the skills into your AI tools
+  idea-to-launch uninstall [options]   Remove them again (only folders this project installed)
+  idea-to-launch list                  Show where they are installed
+  idea-to-launch agents                Show every supported tool and its folder
+  idea-to-launch package               Build dist/ (Claude Desktop zips, single-file prompt)
 
 Options
   --agent <ids>     Only these tools, comma-separated (see "agents"). Default: every tool found
@@ -63,7 +63,7 @@ function parseArgs(argv) {
 }
 
 function fail(message) {
-  console.error(`software-builder: ${message}`)
+  console.error(`idea-to-launch: ${message}`)
   process.exit(1)
 }
 
@@ -135,7 +135,7 @@ function install(opts) {
   }
   const { targets, plan } = planTargets(agents, { project: opts.project })
   const verb = opts.dryRun ? 'Would install' : 'Installing'
-  console.log(`${verb} Software Builder ${VERSION} (${opts.skills.length} skills)${opts.project ? ` into ${opts.project}` : ''}\n`)
+  console.log(`${verb} Idea to Launch ${VERSION} (${opts.skills.length} skills)${opts.project ? ` into ${opts.project}` : ''}\n`)
 
   const skipped = []
   for (const dir of targets.keys()) {
@@ -207,7 +207,7 @@ function list() {
     const versions = [...new Set(found.map((s) => installedVersion(join(dir, s))))].join(', ')
     console.log(`${pretty(dir)}: ${found.length}/${SKILLS.length} skills (version ${versions})`)
   }
-  if (!any) console.log('Software Builder is not installed in any user folder yet.')
+  if (!any) console.log('Idea to Launch is not installed in any user folder yet.')
 }
 
 function agentsTable() {

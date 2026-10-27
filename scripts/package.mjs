@@ -1,7 +1,7 @@
 // Builds dist/ for places that can't read a skills folder directly:
 //   dist/claude-desktop/<skill>.zip       one upload per skill (Claude Desktop chat, claude.ai)
-//   dist/software-builder-skills.zip      all skills, for copying into any tool by hand
-//   dist/software-builder-prompt.md       one file for tools without skills support
+//   dist/idea-to-launch-skills.zip      all skills, for copying into any tool by hand
+//   dist/idea-to-launch-prompt.md       one file for tools without skills support
 //                                          (ChatGPT projects or GPTs, AGENTS.md, custom instructions)
 import { mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { dirname, join, relative, resolve, sep } from 'node:path'
@@ -35,7 +35,7 @@ export function buildPrompt() {
   const version = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8')).version
   const read = (p) => readFileSync(join(ROOT, p), 'utf8')
   const parts = [
-    `# Software Builder ${version}: instructions for your AI assistant`,
+    `# Idea to Launch ${version}: instructions for your AI assistant`,
     'Use these instructions when helping someone who may not code turn an idea into working software. ' +
       'Where they mention another step by name (app-idea, app-plan, app-design, app-build, app-change, app-fix, app-review, app-launch), ' +
       'follow the matching section of "The whole journey" below.',
@@ -54,9 +54,9 @@ export function packageAll() {
   for (const skill of SKILLS) {
     writeFileSync(join(DIST, 'claude-desktop', `${skill}.zip`), createZip(skillEntries(skill)))
   }
-  writeFileSync(join(DIST, 'software-builder-skills.zip'), createZip(SKILLS.flatMap(skillEntries)))
-  writeFileSync(join(DIST, 'software-builder-prompt.md'), buildPrompt())
-  console.log(`package: wrote dist/claude-desktop/ (${SKILLS.length} zips), dist/software-builder-skills.zip and dist/software-builder-prompt.md`)
+  writeFileSync(join(DIST, 'idea-to-launch-skills.zip'), createZip(SKILLS.flatMap(skillEntries)))
+  writeFileSync(join(DIST, 'idea-to-launch-prompt.md'), buildPrompt())
+  console.log(`package: wrote dist/claude-desktop/ (${SKILLS.length} zips), dist/idea-to-launch-skills.zip and dist/idea-to-launch-prompt.md`)
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) packageAll()
