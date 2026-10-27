@@ -1,6 +1,6 @@
 ---
 name: app-launch
-description: Put an app on the internet safely for a non-technical owner: what going live needs, hosting and domain choices, settings by purpose, explicit approval before anything goes live, and checks after.
+description: "Put an app on the internet safely for a non-technical owner: what going live needs, hosting and domain choices, settings by purpose, explicit approval before anything goes live, and checks after."
 license: MIT
 metadata:
   suite: idea-to-launch

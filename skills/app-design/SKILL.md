@@ -1,6 +1,6 @@
 ---
 name: app-design
-description: Choose how an app looks and sounds for a non-technical owner. Shows three directions, commits to one, and saves colours, type and voice. Use to pick a look or make an app look better.
+description: "Choose how an app looks and sounds for a non-technical owner. Shows three directions, commits to one, and saves colours, type and voice. Use to pick a look or make an app look better."
 license: MIT
 metadata:
   suite: idea-to-launch

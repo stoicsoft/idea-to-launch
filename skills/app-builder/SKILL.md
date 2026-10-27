@@ -1,6 +1,6 @@
 ---
 name: app-builder
-description: Start here to turn an idea into a working app, website or tool, for people who don't code. Guides idea, plan, look, build, check and go-live, and resumes saved projects.
+description: "Start here to turn an idea into a working app, website or tool, for people who don't code. Guides idea, plan, look, build, check and go-live, and resumes saved projects."
 license: MIT
 metadata:
   suite: idea-to-launch

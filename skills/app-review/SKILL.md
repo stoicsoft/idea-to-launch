@@ -1,6 +1,6 @@
 ---
 name: app-review
-description: Check whether an app is ready for real customers, as a senior engineer, a first-time customer on a phone, and the person it's for. Saves findings in plain words and fixes them only if asked.
+description: "Check whether an app is ready for real customers, as a senior engineer, a first-time customer on a phone, and the person it's for. Saves findings in plain words and fixes them only if asked."
 license: MIT
 metadata:
   suite: idea-to-launch

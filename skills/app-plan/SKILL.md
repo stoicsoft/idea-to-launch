@@ -1,6 +1,6 @@
 ---
 name: app-plan
-description: Turn a confirmed idea into what each person can do, a one-page spec and a build plan the person approves. Use after the idea is clear and before building anything big.
+description: "Turn a confirmed idea into what each person can do, a one-page spec and a build plan the person approves. Use after the idea is clear and before building anything big."
 license: MIT
 metadata:
   suite: idea-to-launch

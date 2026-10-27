@@ -71,6 +71,8 @@ for (const skill of SKILLS) {
   if (!desc) err(where, 'description is required')
   if (desc.length > 200) err(where, `description is ${desc.length} chars; Claude Desktop uploads allow 200`)
   if (/[<>]/.test(desc)) err(where, 'description may not contain < or >')
+  // Strict YAML readers (Cursor's, for one) drop an unquoted description that holds ": ".
+  if (!/^description: "[^"\\]*"\s*$/m.test(readFileSync(join(dir, 'SKILL.md'), 'utf8'))) err(where, 'description must be on one line in double quotes, with no " or \\ inside')
   if (data.metadata?.suite !== SUITE) err(where, `metadata.suite must be "${SUITE}" (uninstall relies on it)`)
   if (data.metadata?.version !== VERSION) err(where, `metadata.version "${data.metadata?.version}" must equal package.json "${VERSION}"`)
   const lines = body.split('\n').length
