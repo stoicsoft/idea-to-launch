@@ -73,7 +73,7 @@ install once:
   codex plugin add idea-to-launch@idea-to-launch
   ```
 - **As plain skills:** `npx github:OWNER/idea-to-launch --agent codex` (installs into
-  `~/.codex/skills`).
+  `~/.agents/skills`, the shared folder Codex reads).
 
 Restart the Codex app, or start a new session.
 
@@ -169,12 +169,12 @@ project; "inside a project" applies only to that project.
 | Tool | `--agent` | Your user folder | Inside a project (`--project`) |
 |---|---|---|---|
 | Claude Code (and the Code tab in Claude Desktop) | `claude` | `~/.claude/skills` | `.claude/skills` |
-| Codex (CLI, IDE extension and Codex app) | `codex` | `~/.codex/skills` | `.agents/skills` |
+| Codex (CLI, IDE extension and Codex app) | `codex` | `~/.agents/skills` | `.agents/skills` |
 | Gemini CLI | `gemini` | `~/.gemini/skills` | `.gemini/skills` |
 | GitHub Copilot (CLI and VS Code) | `copilot` | `~/.copilot/skills` | `.github/skills` |
 | OpenCode | `opencode` | `~/.config/opencode/skills` | `.opencode/skills` |
 | Windsurf | `windsurf` | `~/.codeium/windsurf/skills` | `.windsurf/skills` |
-| Cline | `cline` | `~/.agents/skills` | `.agents/skills` |
+| Cline | `cline` | `~/.cline/skills` | `.cline/skills` |
 | Kiro | `kiro` | `~/.kiro/skills` | `.kiro/skills` |
 | Qwen Code | `qwen` | `~/.qwen/skills` | `.qwen/skills` |
 | Roo Code | `roo` | `~/.roo/skills` | `.roo/skills` |
@@ -191,7 +191,14 @@ project; "inside a project" applies only to that project.
 <!-- END AGENTS -->
 
 `~` means your home folder (`C:\Users\<you>` on Windows). If you set
-`CLAUDE_CONFIG_DIR` or `CODEX_HOME`, the installer uses those instead.
+`CLAUDE_CONFIG_DIR`, the installer uses it instead of `~/.claude`.
+
+Several tools read more than their own folder: Codex, Gemini, Copilot,
+OpenCode and Cursor all load `~/.agents/skills`, and OpenCode and Cursor
+also load `~/.claude/skills`. The installer writes one copy where these
+overlap, so a tool doesn't list every skill twice. Cursor and OpenCode
+still see two copies when Claude Code is installed too, because Claude Code
+reads only its own folder.
 
 Missing your tool? If it supports Agent Skills (a folder of `SKILL.md`
 files), copy the nine folders from `skills/` into its skills folder, and

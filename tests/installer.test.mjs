@@ -34,10 +34,20 @@ test('installs into every detected tool, and Cursor reuses an existing copy', ()
   const { code, out } = run(home, ['install'])
   assert.equal(code, 0, out)
   assert.ok(installed(join(home, '.claude/skills')))
-  assert.ok(installed(join(home, '.codex/skills')))
-  assert.ok(installed(join(home, '.gemini/skills')))
+  assert.ok(installed(join(home, '.agents/skills')))
+  assert.ok(!existsSync(join(home, '.gemini/skills')), 'Gemini already reads ~/.agents/skills; a second copy makes it warn about every skill')
   assert.ok(!existsSync(join(home, '.cursor/skills')), 'Cursor already reads ~/.claude/skills; a second copy would duplicate every skill')
+  assert.match(out, /Gemini CLI\s+uses the copy in ~[\\/]\.agents[\\/]skills/)
   assert.match(out, /Cursor\s+uses the copy in ~[\\/]\.claude[\\/]skills/)
+})
+
+test('a tool never gets a second copy of a folder it already reads', () => {
+  // Every tool found on the M1 test Mac, where Codex listed each skill twice and Gemini warned about all nine.
+  const home = fakeHome('.claude', '.codex', '.gemini', '.copilot', '.config/opencode', '.cline', '.kiro', '.gemini/antigravity', '.cursor')
+  const { code, out } = run(home, ['install'])
+  assert.equal(code, 0, out)
+  for (const dir of ['.claude/skills', '.agents/skills', '.cline/skills', '.kiro/skills', '.gemini/antigravity/skills']) assert.ok(installed(join(home, dir)), dir)
+  for (const dir of ['.codex/skills', '.gemini/skills', '.copilot/skills', '.config/opencode/skills', '.cursor/skills']) assert.ok(!existsSync(join(home, dir)), `${dir} would duplicate a folder that tool already reads`)
 })
 
 test('Cursor alone gets its own folder', () => {

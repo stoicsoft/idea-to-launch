@@ -9,16 +9,18 @@
 //            (prevents the same skill showing up twice)
 //
 // Order matters: tools listed earlier are installed first, and later tools
-// whose `covers` already holds a copy are skipped.
+// whose `covers` already holds a copy are skipped. Claude Code and Codex come
+// first because most other tools also read their folders; ~/.agents/skills
+// is the shared one that Codex, Gemini, Copilot, OpenCode and Cursor all load.
 
 export const AGENTS = [
   { id: 'claude', name: 'Claude Code (and the Code tab in Claude Desktop)', home: '~/.claude/skills', detect: ['~/.claude'], project: '.claude/skills' },
-  { id: 'codex', name: 'Codex (CLI, IDE extension and Codex app)', home: '~/.codex/skills', detect: ['~/.codex'], project: '.agents/skills' },
-  { id: 'gemini', name: 'Gemini CLI', home: '~/.gemini/skills', detect: ['~/.gemini'], project: '.gemini/skills' },
-  { id: 'copilot', name: 'GitHub Copilot (CLI and VS Code)', home: '~/.copilot/skills', detect: ['~/.copilot'], project: '.github/skills' },
-  { id: 'opencode', name: 'OpenCode', home: '~/.config/opencode/skills', detect: ['~/.config/opencode'], project: '.opencode/skills' },
+  { id: 'codex', name: 'Codex (CLI, IDE extension and Codex app)', home: '~/.agents/skills', detect: ['~/.codex'], project: '.agents/skills' },
+  { id: 'gemini', name: 'Gemini CLI', home: '~/.gemini/skills', detect: ['~/.gemini'], project: '.gemini/skills', covers: ['~/.agents/skills'] },
+  { id: 'copilot', name: 'GitHub Copilot (CLI and VS Code)', home: '~/.copilot/skills', detect: ['~/.copilot'], project: '.github/skills', covers: ['~/.agents/skills'] },
+  { id: 'opencode', name: 'OpenCode', home: '~/.config/opencode/skills', detect: ['~/.config/opencode'], project: '.opencode/skills', covers: ['~/.claude/skills', '~/.agents/skills'] },
   { id: 'windsurf', name: 'Windsurf', home: '~/.codeium/windsurf/skills', detect: ['~/.codeium/windsurf'], project: '.windsurf/skills' },
-  { id: 'cline', name: 'Cline', home: '~/.agents/skills', detect: ['~/.cline'], project: '.agents/skills' },
+  { id: 'cline', name: 'Cline', home: '~/.cline/skills', detect: ['~/.cline'], project: '.cline/skills' },
   { id: 'kiro', name: 'Kiro', home: '~/.kiro/skills', detect: ['~/.kiro'], project: '.kiro/skills' },
   { id: 'qwen', name: 'Qwen Code', home: '~/.qwen/skills', detect: ['~/.qwen'], project: '.qwen/skills' },
   { id: 'roo', name: 'Roo Code', home: '~/.roo/skills', detect: ['~/.roo'], project: '.roo/skills' },
@@ -31,7 +33,7 @@ export const AGENTS = [
   { id: 'continue', name: 'Continue', home: '~/.continue/skills', detect: ['~/.continue'], project: '.continue/skills' },
   { id: 'augment', name: 'Augment', home: '~/.augment/skills', detect: ['~/.augment'], project: '.augment/skills' },
   { id: 'junie', name: 'Junie', home: '~/.junie/skills', detect: ['~/.junie'], project: '.junie/skills' },
-  { id: 'cursor', name: 'Cursor', home: '~/.cursor/skills', detect: ['~/.cursor'], project: '.cursor/skills', covers: ['~/.claude/skills', '~/.codex/skills', '~/.agents/skills'] },
+  { id: 'cursor', name: 'Cursor', home: '~/.cursor/skills', detect: ['~/.cursor'], project: '.cursor/skills', covers: ['~/.claude/skills', '~/.agents/skills', '~/.codex/skills'] },
 ]
 
 // The skills this project ships, in journey order.

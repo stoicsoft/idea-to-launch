@@ -67,10 +67,9 @@ function fail(message) {
   process.exit(1)
 }
 
-/** "~/.claude/skills" → absolute path, honouring CLAUDE_CONFIG_DIR and CODEX_HOME. */
+/** "~/.claude/skills" → absolute path, honouring CLAUDE_CONFIG_DIR. */
 export function expandHome(p, env = process.env, home = homedir()) {
   if (p === '~/.claude/skills' && env.CLAUDE_CONFIG_DIR) return join(env.CLAUDE_CONFIG_DIR, 'skills')
-  if (p === '~/.codex/skills' && env.CODEX_HOME) return join(env.CODEX_HOME, 'skills')
   return p.startsWith('~/') ? join(home, p.slice(2)) : p
 }
 
