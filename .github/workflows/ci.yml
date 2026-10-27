@@ -19,3 +19,29 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm run check
       - run: npm test
+      # The Windows installer, both ways it can run: through Node, and plain
+      # PowerShell (7 and the 5.1 that ships with Windows). Cursor must reuse
+      # Claude Code's copy rather than get its own.
+      - name: install.ps1 (PowerShell 7, Node and plain)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force "$HOME\.claude", "$HOME\.cursor" | Out-Null
+          foreach ($plain in @('', '1')) {
+            $env:IDEA_TO_LAUNCH_NO_NODE = $plain
+            ./install.ps1 -Agent claude,cursor
+            if (-not (Test-Path "$HOME\.claude\skills\app-idea\SKILL.md")) { throw "not installed (plain=$plain)" }
+            if (Test-Path "$HOME\.cursor\skills\app-idea") { throw "Cursor got a second copy (plain=$plain)" }
+            ./install.ps1 -Agent claude,cursor -Uninstall
+            if (Test-Path "$HOME\.claude\skills\app-idea") { throw "not removed (plain=$plain)" }
+          }
+      - name: install.ps1 (Windows PowerShell 5.1, plain)
+        if: runner.os == 'Windows'
+        shell: powershell
+        env:
+          IDEA_TO_LAUNCH_NO_NODE: '1'
+        run: |
+          ./install.ps1 -Agent claude,cursor
+          if (-not (Test-Path "$HOME\.claude\skills\app-idea\SKILL.md")) { throw 'not installed' }
+          ./install.ps1 -Agent claude,cursor -Uninstall
+          if (Test-Path "$HOME\.claude\skills\app-idea") { throw 'not removed' }

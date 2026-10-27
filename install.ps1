@@ -5,7 +5,11 @@
 # To choose tools, download the script and run it with options:
 #   .\install.ps1 -Agent claude,cursor     .\install.ps1 -All     .\install.ps1 -Uninstall
 # Copies the skills into every AI tool it finds. Uses Node.js when available
-# (same logic as npx), and plain PowerShell otherwise. No admin rights needed.
+# (same logic as npx), and plain PowerShell otherwise (or when
+# IDEA_TO_LAUNCH_NO_NODE is set). No admin rights needed.
+#
+# Under `irm | iex` the script runs inside the person's own PowerShell window,
+# where `exit` would close that window, so it only exits when run as a file.
 param(
   [string[]]$Agent = @(),
   [switch]$All,
@@ -74,13 +78,13 @@ if ($PSScriptRoot -and (Test-Path (Join-Path $PSScriptRoot 'skills/app-builder/S
 
 # ── Prefer the Node installer: same behaviour as npx ─────────────────────────
 $Node = Get-Command node -ErrorAction SilentlyContinue
-if ($Node -and ([int]((& node -p 'process.versions.node').Split('.')[0]) -ge 18)) {
+if (-not $env:IDEA_TO_LAUNCH_NO_NODE -and $Node -and ([int]((& node -p 'process.versions.node').Split('.')[0]) -ge 18)) {
   $NodeArgs = @((Join-Path $Src 'scripts/cli.mjs'), $(if ($Uninstall) { 'uninstall' } else { 'install' }))
   if ($Agent.Count) { $NodeArgs += @('--agent', ($Agent -join ',')) }
   if ($All) { $NodeArgs += '--all' }
   if ($DryRun) { $NodeArgs += '--dry-run' }
   & node @NodeArgs
-  exit $LASTEXITCODE
+  if ($PSCommandPath) { exit $LASTEXITCODE } else { return }
 }
 
 # ── Plain-PowerShell fallback ────────────────────────────────────────────────
@@ -91,7 +95,7 @@ $Selected = $Agents | Where-Object {
 }
 if (-not $Selected) {
   Write-Host 'No AI tools found on this computer. Choose one with -Agent (for example: -Agent claude) or use -All.'
-  exit 1
+  if ($PSCommandPath) { exit 1 } else { return }
 }
 
 $Targets = @()
