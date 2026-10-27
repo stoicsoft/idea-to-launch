@@ -37,6 +37,15 @@ Pick one:
   [Mac/Linux](#mac-and-linux-without-nodejs) or [Windows](#windows)
   installer. The steps appear as `/app-idea` and so on.
 
+The first time a step opens its own reference pages, Claude Code asks
+whether it may read them, because they sit outside your project folder.
+Allow it for the session. The rules that matter most are written into each
+step, so the method still holds if you say no. To stop the question for
+good, open `/permissions` in Claude Code and allow
+`Read(~/.claude/skills/**)` (for the plugin: `Read(~/.claude/plugins/**)`).
+A [project install](#one-project-only-share-with-your-team) never asks,
+because the pages live inside the project.
+
 ## Claude Desktop and claude.ai
 
 Claude Desktop has two places where skills live:
