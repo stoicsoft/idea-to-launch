@@ -93,6 +93,8 @@ home_path() { # relative path under $HOME, honouring CLAUDE_CONFIG_DIR
     *) printf '%s' "$HOME/$1" ;;
   esac
 }
+# "$HOME/x" → "~/x", by hand: bash 5.2 expands a ~ in a ${var/pattern/~} replacement.
+pretty() { case "$1" in "$HOME"/*) printf '~%s' "${1#"$HOME"}" ;; *) printf '%s' "$1" ;; esac; }
 is_ours() { [ -f "$1/SKILL.md" ] && grep -Eq "suite:[[:space:]]*[\"']?$SUITE" "$1/SKILL.md"; }
 wanted() { # is this agent selected?
   local id="$1" detect="$2"
@@ -114,7 +116,7 @@ while IFS='|' read -r id name home detect covers; do
   if [ "$MODE" = "uninstall" ]; then
     for s in $SKILLS; do
       if is_ours "$dir/$s"; then
-        say "  removed ${dir/#$HOME/~}/$s"
+        say "  removed $(pretty "$dir")/$s"
         [ "$DRY" = 1 ] || rm -rf "${dir:?}/$s"
       fi
     done
@@ -126,13 +128,13 @@ while IFS='|' read -r id name home detect covers; do
   done
   case " $TARGETS " in *" $dir "*) shared="$dir" ;; esac
   if [ -n "$shared" ]; then
-    say "  ✓ $name"; say "      uses the copy in ${shared/#$HOME/~}"
+    say "  ✓ $name"; say "      uses the copy in $(pretty "$shared")"
     continue
   fi
   TARGETS="$TARGETS $dir"
   for s in $SKILLS; do
     if [ -e "$dir/$s" ] && ! is_ours "$dir/$s"; then
-      say "  ! Skipped ${dir/#$HOME/~}/$s: a different skill with this name is already there"
+      say "  ! Skipped $(pretty "$dir")/$s: a different skill with this name is already there"
       continue
     fi
     if [ "$DRY" = 0 ]; then
@@ -141,7 +143,7 @@ while IFS='|' read -r id name home detect covers; do
       cp -R "$SRC/skills/$s" "$dir/$s"
     fi
   done
-  say "  ✓ $name"; say "      ${dir/#$HOME/~}"
+  say "  ✓ $name"; say "      $(pretty "$dir")"
 done <<EOF
 $AGENTS_TABLE
 EOF
