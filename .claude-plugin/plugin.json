@@ -1,0 +1,22 @@
+{
+  "name": "software-builder",
+  "version": "1.0.0",
+  "description": "Turn an idea into working software without knowing how to code: a plain-language interview, a plan you approve, a chosen look, a safe build, a customer-eye check and a guided launch, in your language.",
+  "author": {
+    "name": "StoicSoft"
+  },
+  "homepage": "https://github.com/OWNER/REPO",
+  "repository": "https://github.com/OWNER/REPO",
+  "license": "MIT",
+  "keywords": [
+    "no-code",
+    "non-technical",
+    "founder",
+    "app-builder",
+    "planning",
+    "review",
+    "launch",
+    "i18n"
+  ],
+  "icon": "./assets/icon.png"
+}

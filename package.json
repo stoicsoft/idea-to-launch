@@ -1,0 +1,47 @@
+{
+  "name": "software-builder-skills",
+  "version": "1.0.0",
+  "description": "Agent skills that help people who don't code turn an idea into working software with Claude, Codex, Cursor, Gemini, Copilot and other AI tools, in their own language.",
+  "type": "module",
+  "bin": {
+    "software-builder": "scripts/cli.mjs"
+  },
+  "files": [
+    "skills",
+    "shared",
+    "scripts",
+    "install.sh",
+    "install.ps1",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check && node scripts/validate.mjs",
+    "test": "node --test",
+    "package": "node scripts/cli.mjs package",
+    "set-repo": "node scripts/set-repo.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/REPO.git"
+  },
+  "homepage": "https://github.com/OWNER/REPO#readme",
+  "author": "StoicSoft",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "claude",
+    "claude-code",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "no-code",
+    "non-technical",
+    "app-builder",
+    "founder"
+  ]
+}

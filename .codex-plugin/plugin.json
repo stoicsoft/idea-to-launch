@@ -1,0 +1,44 @@
+{
+  "name": "software-builder",
+  "version": "1.0.0",
+  "description": "Turn an idea into working software without knowing how to code: a plain-language interview, a plan you approve, a chosen look, a safe build, a customer-eye check and a guided launch, in your language.",
+  "author": {
+    "name": "StoicSoft"
+  },
+  "homepage": "https://github.com/OWNER/REPO",
+  "repository": "https://github.com/OWNER/REPO",
+  "license": "MIT",
+  "keywords": [
+    "no-code",
+    "non-technical",
+    "founder",
+    "app-builder",
+    "planning",
+    "review",
+    "launch",
+    "i18n"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Software Builder",
+    "shortDescription": "Build real apps without coding",
+    "longDescription": "Shape your idea in plain words, approve a one-page plan, pick a look, then build, check like a real customer and go live, in your own language. Your project's memory is saved in a product/ folder so you can continue any time, in any AI tool.",
+    "developerName": "StoicSoft",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/OWNER/REPO",
+    "defaultPrompt": [
+      "I have an idea for an app. Can you help me build it?",
+      "Is my app ready for real customers?",
+      "Help me put my app online"
+    ],
+    "brandColor": "#2F5FD0",
+    "screenshots": [],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

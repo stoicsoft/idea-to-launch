@@ -1,0 +1,19 @@
+{
+  "name": "software-builder",
+  "owner": {
+    "name": "StoicSoft"
+  },
+  "metadata": {
+    "description": "Software Builder: skills that help people who don't code build real apps with their AI tool.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "software-builder",
+      "source": "./",
+      "description": "Idea to launch for non-technical builders: interview, plan, design, build, review, fix and go live, in your language.",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}
