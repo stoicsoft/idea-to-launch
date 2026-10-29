@@ -37,7 +37,9 @@ Read [talking-rules.md](references/talking-rules.md) and
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:
@@ -123,13 +125,35 @@ Follow hosting.md for the chosen host:
   and the webhook shows as delivered.
 - Record the address, host, date, version (git commit), and how to roll
   back in `launch.md`. Set `progress.md` to stage `live`.
+- Fill in "How we'll know it worked" in `launch.md` from the plan: the
+  target, who counts it, today as the start date, and the check date. Put
+  "On <check date>: look at how it went" as the next step in
+  `progress.md`.
 
 ## 6. Tell them
 
 In one sentence, say what changed. Give the address, and the one thing to
 check first ("Open it on your phone and place a test booking"). Then give
 any operations lines from the plan ("Put the booking link in your Zalo
-auto-reply").
+auto-reply"), and the check date in one line: "On 3 November, ask me how
+it went and we'll look at the number together."
+
+## How it went
+
+On or after the check date (app-builder notices it when they come back),
+look at the number with them:
+1. Read it from the owner's page, or ask them for it if they count it by
+   hand.
+2. Compare it with the target in one plain line: "You hoped for 10
+   bookings through the page in the first week. There were 9."
+3. Ask what it means, with your recommendation:
+   > **What next?**
+   > a) Keep going as it is · b) Change one thing: _(the likeliest fix, often from the plan's risks)_ · c) Rethink the idea
+4. Write the result and one "What we learned" line in `launch.md`, and a
+   log line in `progress.md`. The next idea or feature starts from it.
+
+A missed target is information, not failure. Say it plainly and never
+dress it up.
 
 ## When something fails
 

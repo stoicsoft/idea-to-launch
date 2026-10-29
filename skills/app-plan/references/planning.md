@@ -61,6 +61,9 @@ write "the empty state component renders". Write what a person would see.
   the stories it serves (N1, N2…).
 - **Operations lines** are things to do outside the software that reduce a
   risk. They are shown apart from build steps and cost nothing to build.
+- **How we'll know it worked:** the target from the brief, who or what
+  counts it, and when to check. When the app can count it, the count is
+  part of the step that serves its story, never left for later.
 - **One-way doors** each get one line saying why they're hard to undo.
 - **Settings needed later**: list by purpose only, for example "To take
   real payments: a Stripe account (we'll set it up when going live)".

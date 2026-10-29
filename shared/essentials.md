@@ -14,7 +14,9 @@
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:

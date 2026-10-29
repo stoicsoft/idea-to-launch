@@ -35,7 +35,8 @@ local "test checkout" page so the flow can still be tried.
 - The webhook refuses a bad signature, and handles the same event twice
   only once.
 - The success page doesn't mark anything paid by itself.
-- A scan of `src/` finds no card-number fields or 13–19 digit literals.
+- A scan of `src/` finds no card-number fields or card-number literals
+  (app-review's quality scan checks this, and the webhook).
 
 ## Settings needed
 | Setting | What it's for | Where to find it |

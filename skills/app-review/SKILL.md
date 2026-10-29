@@ -35,7 +35,9 @@ Read [talking-rules.md](references/talking-rules.md) and
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:
@@ -53,8 +55,8 @@ Run them in this order. The detailed rubrics are in
 
 1. **Engineer's read** (read-only). Trace each Now story from the page to
    the saved data and back. Check that errors have names, the four paths
-   work, data is safe, nothing is left as a placeholder, and the copy is
-   right. Run the project's check script (type check, tests, build), plus
+   work, data is safe, nothing is left as a placeholder, the copy is
+   right, and the plan's success number is counted. Run the project's check script (type check, tests, build), plus
    the scanner:
    `node <this skill's folder>/scripts/quality-scan.mjs <project folder>`
    (if Node isn't available, do the same checks by reading).
@@ -78,8 +80,9 @@ Run them in this order. The detailed rubrics are in
 
 Each finding has:
 - **severity:** **must fix** (blocks a main journey, loses or leaks data,
-  breaks a promise in the acceptance lines, or shows an English or
-  placeholder string in a non-English app) or **should fix** (hurts a
+  breaks a promise in the acceptance lines, leaves the plan's success
+  number uncounted, or shows an English or placeholder string in a
+  non-English app) or **should fix** (hurts a
   secondary path, or is real polish that customers will notice);
 - a **title in plain words**, from the customer's side ("Linh can book the
   same time twice");

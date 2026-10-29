@@ -32,6 +32,10 @@ these in order:
    sizes), and the chosen direction is applied consistently.
 9. **Checks.** The check script passes. Tests cover the main journeys, and
    no test was skipped or weakened.
+10. **The success number.** If `plan.md` says the app counts "How we'll
+    know it worked", doing that action once adds one to the number the
+    owner sees. A missing or broken count is a must-fix: without it,
+    nobody will know whether the app helped.
 
 ### The scanner
 
@@ -43,7 +47,12 @@ prints findings and exits non-zero if it finds something. It looks for:
 - dangerous code (`dangerouslySetInnerHTML`, `eval(`, `new Function`);
 - placeholder text (lorem ipsum, TODO and FIXME in visible strings, "Your
   text here", `href="#"`);
-- hard-coded colours outside the design tokens file (advisory).
+- hard-coded colours outside the design tokens file (advisory);
+- the feature guides' safeguards: private routes and pages that never
+  check who is signing in, a Stripe webhook that doesn't verify its
+  signature on the raw body, card fields or card numbers in the app, an
+  upload path with no size limit (or one checked only after writing), and
+  job handlers that would do the work twice on a retry.
 
 A scanner hit is a lead, not a verdict. Confirm each hit by reading the
 code, and report false alarms as such.

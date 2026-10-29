@@ -123,5 +123,7 @@ isn't true.
 - [ ] Every form keeps input on error and can't double-submit.
 - [ ] Keyboard-only use works, and the focus ring is visible.
 - [ ] Only design tokens are used, with no hard-coded colours or font sizes.
+- [ ] If the plan says the app counts "How we'll know it worked", the
+      number shows on the owner's page and goes up by one per action.
 - [ ] The check script passes (type check, tests, build).
 - [ ] Nothing secret is in code that reaches the browser (see [data-and-safety.md](data-and-safety.md)).

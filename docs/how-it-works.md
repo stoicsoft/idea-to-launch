@@ -81,7 +81,7 @@ format.
 skills/<step>/SKILL.md        the instructions for each step
 skills/<step>/references/     detail read only when needed
 skills/<step>/assets/         templates for the product/ pages
-skills/app-review/scripts/    quality-scan.mjs (secrets, unsafe code, placeholders)
+skills/app-review/scripts/    quality-scan.mjs (secrets, unsafe code, placeholders, feature safeguards)
 shared/                       rules every step follows (copied into each skill on build)
 scripts/                      installer, build, validation, packaging
 ```

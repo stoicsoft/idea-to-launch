@@ -52,7 +52,9 @@ Before you start, read:
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:
@@ -110,6 +112,9 @@ For each plan step, in order:
    content, never placeholders.
 3. Run the checks (type check, tests, build). Fix anything that fails
    before moving on. Never skip, weaken or delete a test to get green.
+   If two attempts to fix the same failure don't work, stop: undo the
+   attempts, tell them what is still failing and what you tried, and ask
+   how to continue (app-fix, "Two tries, then stop").
 4. Start the app and try the step yourself, in a browser if you have
    browser tools, or by calling the pages and actions directly if not.
 5. Update `product/progress.md` (one log line), and save a version if
@@ -119,6 +124,18 @@ For each plan step, in order:
 decision only they can make, or something that would change the approved
 scope. Say what you found, the options, and your recommendation. Never
 silently add or drop scope.
+
+**Count what the plan says to count.** When you build the step that
+serves the plan's "How we'll know it worked" target, build the count with
+it:
+- Prefer counting what the app already saves (bookings since going live,
+  by where they came from). Add a small `events` table (a name and a time,
+  no personal details) only for something it doesn't save.
+- Show the number on the owner's page in plain words, counted from the
+  day it goes live: "Bookings through the page since 3 November: 9".
+- Count actions, not people: no third-party trackers and no personal
+  details for this.
+- Test it: doing the action once adds exactly one.
 
 **No accounts needed while building.** Features that later need a paid
 service (email, payments, file storage) run in a local test mode first:

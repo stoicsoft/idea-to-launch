@@ -21,7 +21,9 @@ Before you start, read:
   wording to use.
 
 If `product/brief.md` already exists, read it and continue from what is
-still open. Never re-ask what it already answers.
+still open. Never re-ask what it already answers. If `product/launch.md`
+has a "What we learned" line from an earlier version, start from it:
+confirm it in round 1 and let it shape the questions.
 
 <!-- BEGIN ESSENTIALS (generated from shared/essentials.md by scripts/build.mjs) -->
 **Always, even if you can't open the reference files:**
@@ -40,7 +42,9 @@ still open. Never re-ask what it already answers.
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:

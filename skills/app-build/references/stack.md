@@ -48,9 +48,24 @@ asked.
   `.data/` folder (`drizzle-orm/pglite`). Nothing else reads
   `DATABASE_URL` or holds a connection string.
 - The schema lives in `src/lib/schema.ts`. Migrations are generated SQL
-  files in `drizzle/`, committed, and applied by one `db:migrate` script
-  that runs the same way locally and online. Migrations only add; see
-  data-and-safety.md.
+  files in `drizzle/`, committed, and never edited after they run.
+  Migrations only add; see data-and-safety.md.
+- **Only one process may open `.data/` at a time.** A second one (a
+  migrate script, a build, another dev server) can corrupt the local
+  database. So:
+  - Locally, the app applies pending migrations itself when `db.ts` first
+    opens PGlite (`migrate()` from `drizzle-orm/pglite/migrator`). There is
+    no separate migrate step while building.
+  - `db.ts` opens the database on the first query, never at import time,
+    so `build` and `typecheck` don't open `.data/`. Pages that read data
+    are dynamic.
+  - Keep one PGlite instance per process (cache it on `globalThis`),
+    because the development server reloads modules.
+  - Tests use their own in-memory PGlite, never `.data/`.
+  - `db:migrate` is only for hosted PostgreSQL, where it runs as the
+    host's pre-deploy step. Without `DATABASE_URL` it stops with a message
+    ("locally, the app applies migrations when it starts") instead of
+    opening `.data/`.
 - Store money as whole minor units (cents) and dates as timestamps with a
   time zone.
 

@@ -11,6 +11,11 @@
 ## Hard to undo (needs your yes)
 - _This decides who can see bookings, which is hard to change once customers use it._
 
+## How we'll know it worked
+- **Target:** _10 bookings through the page in the first week_
+- **Counted by:** _the app: "Bookings through the page" on your bookings list_ / _you: count booking messages on Zalo each evening_
+- **Check:** _one week after going live_
+
 ## Things to do outside the app
 - _Put the booking link in your Zalo auto-reply for two weeks (reduces the risk that regulars keep messaging)._
 

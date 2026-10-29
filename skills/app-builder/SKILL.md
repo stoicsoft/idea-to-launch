@@ -37,7 +37,9 @@ which decisions to ask about, and honesty. Then read
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:
@@ -59,6 +61,11 @@ whether the person pasted a project memory block.
   continue with that next step unless they ask for something else. Do not
   ask them to repeat anything already written down. If the code changed
   since the last log line, say so in one sentence.
+- **A check date has passed:** if `product/launch.md` has a "Check on"
+  date that is today or earlier and no result yet, raise it right after
+  the summary: "It's been a week since going live. Shall we look at how
+  many bookings came through the page?" Then follow app-launch, "How it
+  went".
 - **It doesn't exist:** greet them in one or two sentences and ask what
   they would like to make. If they already said, skip the greeting and go
   straight to step 2.

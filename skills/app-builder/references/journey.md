@@ -26,6 +26,9 @@ throughout.
   owner sees what came in.
 - Ask once: "A month after launch nobody uses it. Why?" Write the cheapest
   fix as an operations line.
+- Say who counts "how we'll know it worked": the app (built with the
+  story it serves, shown on the owner's page) or the owner by hand. Write
+  the target and the check date in the plan.
 - Save `stories.md`, `spec.md` (the first sentence is the confirmed idea,
   plus "I assumed…" lines) and `plan.md` (steps in the order they'll see
   them working, each serving a story, with one-way doors called out).
@@ -64,6 +67,9 @@ throughout.
 - Gather evidence, restate it, reproduce it, find the cause, make the
   smallest fix, prove it, and stop. Never swallow errors, skip checks or
   delete features. Explain what was wrong in one plain sentence.
+- Two attempts at the same problem, at most. If both fail, undo them, say
+  what is still broken and what you tried, and let them choose: another
+  way, leave it for now, or go back to the last working version.
 
 ## Check (app-review)
 - Engineer's read (the main journey traced end to end, named errors, the
@@ -84,4 +90,7 @@ throughout.
 - They create accounts and paste secrets into the host themselves. Back up
   before data changes, deploy, then open the real address and walk the main
   journey before saying it's live. Record everything in
-  `product/launch.md`.
+  `product/launch.md`, including the target and the check date.
+- On the check date, compare the number with the target in one line, ask
+  whether to keep going, change one thing or rethink, and write one "What
+  we learned" line.

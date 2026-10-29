@@ -15,6 +15,9 @@ The first open-source release of the 1FounderTool method as portable agent skill
   jobs, multiple languages, landing page, search and sharing, spreadsheet
   data, feature switches. Each runs in test mode locally, with no accounts
   needed.
+- `quality-scan.mjs` also checks the feature guides' safeguards: sign-in
+  on private routes, a verified Stripe webhook, no card data, upload size
+  limits, and jobs that are safe to run twice.
 - `quality-scan.mjs`: a dependency-free scan for leaked secrets, unsafe
   HTML, placeholder text and stray colours.
 - Installers: `npx`, `install.sh`, `install.ps1`, a Claude Code plugin

@@ -10,6 +10,11 @@
 ## Hard to undo (needs your yes)
 - Only Mai can see the list of bookings; customers see only their own. (Answered: yes, 2026-10-26)
 
+## How we'll know it worked
+- **Target:** 10 bookings through the page in the first two weeks, and no double bookings.
+- **Counted by:** the app: "Bookings through the page" at the top of Mai's list.
+- **Check:** two weeks after going live.
+
 ## Things to do outside the app
 - Put the booking link in your Zalo auto-reply for two weeks.
 

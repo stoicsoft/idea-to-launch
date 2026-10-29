@@ -41,7 +41,9 @@ what they will be able to do, then go to step 1.
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:
@@ -96,6 +98,14 @@ Settle reversible things yourself and list them as "I assumed…" lines.
 
 - Make sure the brief has a countable signal. If not, offer three and let
   them choose.
+- **Decide who counts it**, because a number nobody counts teaches
+  nothing. If the app can count it (bookings through the page, sign-ups,
+  orders), the build step that serves that story also builds the count,
+  and the owner sees the number on their own page. If only they can count
+  it ("fewer booking messages on Zalo"), write how and when as an
+  operations line. Put the target, who counts it and the check date (a
+  week or a month after going live, as the brief says) in the plan's "How
+  we'll know it worked" section.
 - Ask once: "Imagine a month after going live nobody uses it. What's the
   most likely reason?" Offer options based on the alternatives and the
   people's habits. Turn the answer into a risk with the cheapest fix,

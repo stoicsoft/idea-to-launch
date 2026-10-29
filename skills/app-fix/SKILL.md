@@ -34,7 +34,9 @@ fix only that."
 - **Approval.** Build a new app or feature only after they say yes to a
   plan. "Just build it" or "you decide" skips questions, not that yes.
 - **Honesty.** Call something done or working only after you've tried it.
-  Say plainly what you couldn't check.
+  Say plainly what you couldn't check. If two attempts to fix the same
+  problem fail, stop and tell them what is still broken; never call it
+  fixed.
 - **Memory.** Keep `product/progress.md` current (in a chat without files,
   keep it in the conversation). It starts with these five lines; translate
   the words, keep the structure:
@@ -73,6 +75,30 @@ fix only that."
 6. **Stop.** No restyling, renaming, restructuring or new features "while
    you're here". Note anything else you noticed as a suggestion instead.
 
+## Two tries, then stop
+
+You get **two attempts** at the same problem. An attempt is a code change
+followed by the reproduction or the check. If the second one still fails
+the same way, stop changing code. A third guess on your own is how a small
+bug becomes a broken app.
+
+1. Undo the changes that didn't help, so no half-finished attempt stays in
+   the code. If git is in use, go back to the last saved version of the
+   files you touched.
+2. Tell them plainly, in a few lines: what is still broken (in the
+   customer's words), what you tried and what each attempt showed, what you
+   now think the cause is and how sure you are.
+3. Ask what to do, with your recommendation first:
+   > **This one needs a different approach**
+   > a) Try another way: _(one line on what you'd do differently)_ · b) Leave it for now and carry on with the rest · c) Go back to the last version that worked
+4. Write it under "Waiting on you" in `progress.md`, and keep the problem
+   open in the review file if there is one. It is not fixed until a fix
+   passes the reproduction.
+
+A new attempt after their answer starts a fresh count. A different
+problem found along the way is a different problem: note it, and don't
+count it here.
+
 ## Never
 
 - Swallow an error to silence it, stub or skip a check to make it pass,
@@ -81,6 +107,7 @@ fix only that."
   migration that repairs it, and if data is at risk, stop and ask (one-way
   door).
 - Claim it's fixed without proving it.
+- Keep trying past two failed attempts without asking.
 
 ## 3. Report
 

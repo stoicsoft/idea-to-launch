@@ -22,7 +22,7 @@ Code names in the glossary stay English.
 | `design.md` | app-design | The look: feeling, colours, type, shape, voice |
 | `decisions.md` | any step | One-way-door decisions, one line each, with the date and the reason |
 | `reviews/YYYY-MM-DD.md` | app-review | Findings from a check, and what happened to each one |
-| `launch.md` | app-launch | The go-live checklist, settings needed (names only), the address, and status |
+| `launch.md` | app-launch | The go-live checklist, settings needed (names only), the address, status, and how it went against the target |
 
 Create a file only when its step happens. A quick fix never needs a brief.
 

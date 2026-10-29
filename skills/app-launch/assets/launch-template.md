@@ -27,3 +27,10 @@
 - **Backups:** _daily automatic backups, checked 2026-10-27_
 - **To go back:** _Railway → Deployments → previous one → Redeploy_
 - **First thing to check:** _open it on your phone and place a test booking_
+
+## How we'll know it worked
+- **Target:** _10 bookings through the page in the first week_ (from the plan)
+- **Counted by:** _the app, on your bookings list_ / _you, by hand_
+- **Started:** _2026-10-27_ · **Check on:** _2026-11-03_
+- **Result:** _(on the check date, e.g. "9 of 10")_
+- **What we learned:** _(one line, and what we're doing about it)_

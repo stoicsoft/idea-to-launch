@@ -6,13 +6,17 @@
  *
  * Reports secret-looking strings (source and built client bundles), dangerous
  * code, placeholder text left in screens, .env files that git would commit,
- * and hard-coded colours outside a tokens/theme file. A hit is a lead, not a
- * verdict: confirm each one by reading the code.
+ * and hard-coded colours outside a tokens/theme file. For the app-build
+ * feature guides it also checks that private routes check who is signing
+ * in, the Stripe webhook verifies its signature, no card fields exist,
+ * uploads are size-capped before any write, and every job handler is safe
+ * to run twice. A hit is a lead, not a verdict: confirm each one by reading
+ * the code.
  *
  * Exit code: 1 when any must-fix finding exists, otherwise 0 (2 on bad usage).
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
-import { basename, extname, join, relative, sep } from 'node:path'
+import { basename, dirname, extname, join, relative, sep } from 'node:path'
 
 const args = process.argv.slice(2)
 const asJson = args.includes('--json')
@@ -180,12 +184,170 @@ function checkEnvIgnored() {
   }
 }
 
+// Feature contracts from app-build's feature guides. Each looks for the shape
+// of the safeguard in the source, so a pass is not proof that it works.
+const CODE_FILE = /\.(?:ts|tsx|js|jsx|mts|cts|mjs|cjs)$/
+const ROUTE_FILE = /^route\.(?:ts|tsx|js|jsx|mts|cts)$/
+const PAGE_FILE = /^page\.(?:ts|tsx|js|jsx|mts|cts|mdx)$/
+const LAYOUT_FILE = /^layout\.(?:ts|tsx|js|jsx|mts|cts)$/
+const PRIVATE_SEGMENTS = new Set(['account', 'admin', 'dashboard', 'settings', 'staff', 'billing', 'members', 'internal', 'portal', 'owner'])
+const MODULE_SPECIFIER = /\b(?:import|export)\s[^;]*?\bfrom\s*['"]([^'"]+)['"]|\bimport\s*\(?\s*['"]([^'"]+)['"]|\brequire\(\s*['"]([^'"]+)['"]/g
+const SESSION_CALL = /\b(?:requireUser|requireRole|requireOwner|requireStaff|getSession|getServerSession|getCurrentUser|currentUser)\s*\(|\bauth\.api\.getSession\b/
+const WEBHOOK_VERIFY = /\.webhooks\.constructEvent|constructEventAsync|verif\w*Signature|signature\w*verif/i
+const JSON_BODY = /(?:^|[^\w.])(?:request|req)\.json\s*\(/
+const EVENT_USE = /(?:^|[^\w])(?:event|stripeEvent)\s*\./
+const CARD_RULES = [
+  { rule: 'card-field-name', re: /\bname\s*=\s*\{?\s*["'`]card/i },
+  { rule: 'card-number-field', re: /\bcard[-_]?number\b/i },
+  { rule: 'card-security-field', re: /\b(?:cvc|cvv|csc|security[-_]?code)\b/i },
+  { rule: 'card-autocomplete', re: /\bautocomplete\s*=\s*\{?\s*["'`]cc-/i },
+]
+const DIGITS_LITERAL = /["'`](\d{13,19})["'`]/g
+// Card networks' leading digits (Visa, Mastercard, Amex, Diners, Discover,
+// JCB, UnionPay), so millisecond timestamps (17…) and most ids don't match.
+const CARD_PREFIX = /^(?:4|5[1-5]|2[2-7]|3[0-9]|6)/
+const UPLOAD_SEGMENT = /^(?:files?|uploads?|attachments?)$/i
+const UPLOAD_BODY = /formData\s*\(|multipart/i
+const REQUEST_FACING = /\bNextRequest\b|\bformData\s*\(|\bFile\b|\bacceptUpload\b/
+const WRITE_CALL = /\bwriteFile\s*\(|\bappendFile\s*\(|\bcreateWriteStream\s*\(|\.put\s*\(|\bPutObjectCommand\b/
+const SIZE_CAP = /MAX_\w*(?:BYTES|SIZE)|SIZE_\w*(?:CAP|LIMIT)|\b(?:size|length|bytes|byteLength|content-length)\b[^\n]{0,40}(?:>|>=|MAX|LIMIT|CAP)|status:\s*413/i
+const RUN_ONCE = /idempot|ON\s+CONFLICT|onConflict|job_runs|jobRuns|dedupe|already\s*ran|beginRun|unique/i
+
+/** Code files under a folder, as { rel, segments, name, dir, text }. */
+function codeFilesIn(dir) {
+  const full = join(root, dir)
+  if (!existsSync(full)) return []
+  const out = []
+  for (const file of walk(full)) {
+    const name = basename(file)
+    if (!CODE_FILE.test(name) && !PAGE_FILE.test(name)) continue
+    const text = readText(file)
+    if (text === null) continue
+    const rel = relative(root, file).split(sep).join('/')
+    out.push({ rel, segments: rel.split('/'), name, dir: dirname(file), text })
+  }
+  return out
+}
+
+function readsSession(text) {
+  for (const m of text.matchAll(MODULE_SPECIFIER)) {
+    if (/session|auth/i.test(m[1] ?? m[2] ?? m[3])) return true
+  }
+  return SESSION_CALL.test(text)
+}
+
+const firstExportLine = (text) => Math.max(1, text.split('\n').findIndex((l) => /^\s*export\s/.test(l)) + 1)
+
+function luhn(digits) {
+  let sum = 0
+  for (let i = 0; i < digits.length; i++) {
+    let d = Number(digits[digits.length - 1 - i])
+    if (i % 2 === 1) d = d * 2 > 9 ? d * 2 - 9 : d * 2
+    sum += d
+  }
+  return sum % 10 === 0
+}
+
+function checkFeatures() {
+  const appDir = ['src/app', 'app'].find((d) => existsSync(join(root, d)))
+  const libDir = ['src/lib', 'lib'].find((d) => existsSync(join(root, d)))
+  const appFiles = appDir ? codeFilesIn(appDir) : []
+
+  // Sign-in: a layout doesn't protect API routes, so every private route
+  // checks the user itself. A page is covered by its own check, a layout
+  // above it, or a middleware/proxy file that reads the session.
+  const gate = ['middleware', 'proxy']
+    .flatMap((n) => ['ts', 'js', 'mts', 'mjs'].flatMap((e) => [`src/${n}.${e}`, `${n}.${e}`]))
+    .map((f) => readText(join(root, f)))
+    .some((text) => text !== null && readsSession(text))
+  const appRoot = appDir ? join(root, appDir) : root
+  const layoutGuards = (dir) => {
+    for (let d = dir; d.startsWith(appRoot); d = dirname(d)) {
+      const layout = readdirSync(d).find((n) => LAYOUT_FILE.test(n))
+      if (layout && readsSession(readText(join(d, layout)) ?? '')) return true
+      if (d === appRoot) break
+    }
+    return false
+  }
+  for (const f of appFiles) {
+    const inside = f.segments.slice(appDir.split('/').length)
+    if (!inside.some((s) => s === '(private)' || PRIVATE_SEGMENTS.has(s))) continue
+    if (ROUTE_FILE.test(f.name) && !readsSession(f.text)) {
+      add('must', f.rel, firstExportLine(f.text), 'private-route-without-sign-in-check', 'a private route that never checks who is asking (a layout does not protect API routes)')
+    } else if (PAGE_FILE.test(f.name) && !readsSession(f.text) && !gate && !layoutGuards(f.dir)) {
+      add('must', f.rel, firstExportLine(f.text), 'private-page-without-sign-in-check', 'a private page with no sign-in check in it, its layouts or middleware')
+    }
+  }
+
+  // Payments: the Stripe webhook verifies the signature on the raw body
+  // before reading the event.
+  for (const f of appFiles) {
+    if (!ROUTE_FILE.test(f.name) || !f.segments.some((s) => /webhook/i.test(s))) continue
+    if (!/stripe/i.test(f.text) && !f.segments.some((s) => /stripe/i.test(s))) continue
+    const lines = f.text.split('\n')
+    lines.forEach((l, i) => {
+      if (JSON_BODY.test(l)) add('must', f.rel, i + 1, 'webhook-json-body', 'request.json() cannot be signature-checked; read the raw body with request.text()')
+    })
+    const verifyAt = lines.findIndex((l) => WEBHOOK_VERIFY.test(l))
+    if (verifyAt === -1) {
+      add('must', f.rel, firstExportLine(f.text), 'webhook-not-verified', 'the Stripe webhook never verifies the stripe-signature header')
+      continue
+    }
+    for (let i = 0; i < verifyAt; i++) {
+      const m = EVENT_USE.exec(lines[i])
+      if (m && !isCommentOnly(lines[i], m.index)) add('must', f.rel, i + 1, 'webhook-used-before-verify', 'event data is read before the signature is verified')
+    }
+  }
+
+  // Payments: card details only ever exist on the provider's checkout page.
+  for (const f of codeFilesIn('src')) {
+    if (/(^|\/)(tests?|__tests__|e2e|fixtures?)\//.test(f.rel) || /\.(test|spec)\.[a-z]+$/.test(f.name)) continue
+    f.text.split('\n').forEach((line, i) => {
+      for (const { rule, re } of CARD_RULES) {
+        const m = re.exec(line)
+        if (m && !isCommentOnly(line, m.index)) add('must', f.rel, i + 1, rule, 'card details belong on the payment provider\'s checkout page, never in the app')
+      }
+      for (const m of line.matchAll(DIGITS_LITERAL)) {
+        if (CARD_PREFIX.test(m[1]) && luhn(m[1])) add('must', f.rel, i + 1, 'card-number-literal', 'a card-number-shaped literal in the source')
+      }
+    })
+  }
+
+  // Uploads: the size cap is enforced before any bytes are written.
+  const uploads = [
+    ...appFiles.filter((f) => ROUTE_FILE.test(f.name) && (f.segments.some((s) => UPLOAD_SEGMENT.test(s)) || (UPLOAD_BODY.test(f.text) && /\bFile\b|upload/i.test(f.text)))),
+    ...(libDir ? codeFilesIn(`${libDir}/files`) : []),
+  ]
+  if (uploads.some((f) => WRITE_CALL.test(f.text) || /\bFile\b/.test(f.text))) {
+    if (!uploads.some((f) => SIZE_CAP.test(f.text))) {
+      const anchor = uploads.find((f) => ROUTE_FILE.test(f.name)) ?? uploads[0]
+      add('must', anchor.rel, firstExportLine(anchor.text), 'upload-without-size-cap', 'nothing on the upload path refuses a file that is too big')
+    }
+    for (const f of uploads) {
+      if (!REQUEST_FACING.test(f.text) || !WRITE_CALL.test(f.text)) continue
+      const lines = f.text.split('\n')
+      const firstWrite = lines.findIndex((l) => WRITE_CALL.test(l))
+      if (!lines.slice(0, firstWrite).some((l) => SIZE_CAP.test(l))) {
+        add('must', f.rel, firstWrite + 1, 'upload-written-before-size-check', 'bytes are stored before the size limit is checked')
+      }
+    }
+  }
+
+  // Scheduled jobs: a retried run must not do the work twice.
+  for (const f of libDir ? codeFilesIn(`${libDir}/jobs/handlers`) : []) {
+    if (!RUN_ONCE.test(f.text)) {
+      add('must', f.rel, firstExportLine(f.text), 'job-not-safe-to-run-twice', 'the handler claims no run key (beginRun, ON CONFLICT), so a retry would do the work again')
+    }
+  }
+}
+
 for (const file of walk(root)) scanSource(file)
 for (const dir of BUNDLE_DIRS) {
   const full = join(root, dir)
   if (existsSync(full)) for (const file of walk(full, { bundle: true })) scanBundle(file)
 }
 checkEnvIgnored()
+checkFeatures()
 
 const count = (s) => findings.filter((f) => f.severity === s).length
 const summary = { filesScanned, must: count('must'), should: count('should'), advisory: count('advisory'), truncated: findings.length >= MAX_FINDINGS }
